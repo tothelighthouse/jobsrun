@@ -1,0 +1,136 @@
+@charset "UTF-8";
+* {
+	font-family: "Sunflower", sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1024px;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	/* outline: 1px solid; */
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: grid;
+  	grid-template-rows: minmax(100px, auto) auto 200px;
+  	gap: 20px 0;
+}
+
+.container > div {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+#title{
+	margin:0 auto;
+	width:180px;
+	position:relative;
+	left:30px;
+	font-weight:bold;
+	font-size:30px;
+	margin-top:100px;
+}
+#description{
+	margin:0 auto;
+	margin-top:20px;
+}
+.findPWForm-dh{
+	margin:0 auto;
+	margin-top:30px;
+	height:300px;
+}
+#emamilfont{
+	text-align:center;
+	width:100px;
+	float:left;
+}
+#emailinput{
+	float:left;
+}
+#id{
+	width:210px;
+}
+#emailBtnwrap{
+	float:left;
+}
+#emailBtn{
+	background-color:#A4A4A4;
+	color:white;
+}
+#codewrap{
+	clear:both;
+	position:relative;
+	top:10px;
+}
+#codefont{
+	width:100px;
+	float:left;
+}
+#codeinput{
+	float:left;
+}
+#codeinput-input{
+	width:170px;
+}
+#codeBtnwrap{
+	float:left;
+}
+#codeBtn{
+	background-color:#A4A4A4;
+	color:white;
+}
+#changepwwrap{
+	display:none;
+	position:relative;
+	top:20px;
+	clear:both;
+}
+#changepwfont{
+	width:100px;
+	float:left;
+}
+#changepwinput{
+	float:left;
+}
+#checkpwwrap{
+	display:none;
+	position:relative;
+	top:30px;
+	clear:both;
+}
+#checkpwfont{
+	width:100px;
+	float:left;
+}
+#checkpwinput{
+	float:left;
+}
+#inputpw{
+	width:210px;
+}
+#findPWBtnwrap{
+	clear:both;
+	width:190px;
+	position:relative;
+	top:10px;
+	margin-left:100px;
+}
+#errmsg{
+	color:red;
+	margin-top:15px;
+	margin-left:100px;
+}
+#findPWBtn{
+	background-color:black;
+	opacity:0.8px;
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+	width:215px;
+}

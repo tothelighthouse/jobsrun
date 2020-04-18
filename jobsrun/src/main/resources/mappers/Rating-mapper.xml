@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.Rating-mapper">
+
+<!-- 평가 목록 ************************************************************************** -->
+<select id="rateList" parameterType="String" resultType="RatingVO">
+	SELECT 	t1.rater, t1.rates, t1.detail, t1.rdate, t2.pic
+	FROM	rates t1, member t2
+	WHERE	ratee = #{ratee}
+	AND     t1.rater = t2.id
+</select>
+<!-- 끝 평가 목록 ************************************************************************** -->
+
+
+<!-- 평가하기 -->
+<insert id="rating"  parameterType="RatingVO">
+	INSERT INTO RATES (
+	    NUM, 
+	    rater, 
+	    ratee, 
+	    rates, 
+	    detail
+	) VALUES (
+	    RATES_NUM_SEQ.NEXTVAL
+	    , #{rater}
+	    , #{ratee}
+	    , #{rates}
+	    , #{detail}
+	)
+</insert>
+
+</mapper>

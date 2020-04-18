@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+
+#cslist{
+	padding-bottom:20px;
+	margin-top:20px;
+
+}
+#top{
+	border-top : 1px solid #ccc;
+	float:left;
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+}
+#csbnumtitle{
+	margin-left:20px;
+	width:100px; 
+	margin-top:10px;
+	text-align:center;
+	float:left;
+}
+#csbidtitle{
+	text-align:center;
+	margin-top:10px;
+	margin-left:20px;
+	width:220px; 
+	float:left;
+}
+#csbcontitle{
+	margin-top:10px;
+	margin-left:20px;
+	width:500px; 
+	text-align:center;
+	float:left;
+}
+#csbcdatetitle{
+	margin-top:10px;
+	margin-left:20px;
+	width:110px; 
+	float:left;
+}
+#div1{
+	height:30px;
+	border-bottom:1px solid #ccc;
+	padding-bottom:10px;
+	
+	
+	clear:both;
+}
+
+#csbnum{
+	margin-left:20px;
+	width:100px; 
+	margin-top:10px;
+	text-align:center;
+	float:left;
+}
+#csbid{
+	text-align:center;
+	margin-top:10px;
+	margin-left:20px;
+	width:220px; 
+	float:left;
+}
+#csbtitle{
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+	margin-left:20px;
+	width:500px; 
+	margin-top:10px;
+	float:left;
+}
+#csbcdate{
+	margin-top:10px;
+	margin-left:20px;
+	width:110px; 
+	float:left;
+}
+#first{
+	margin:0 auto;
+	font-size:40px;
+	font-weight:bold;
+}
+#first2{
+	padding-top:100px;
+	margin:0 auto;
+	font-size:40px;
+	font-weight:bold;
+}
+.Q1answer{
+	display:none;
+	padding-bottom:30px;
+		
+}
+#searchbar{
+	padding-top:120px;
+	margin:0 auto;
+}
+.paging2 {
+	margin-top:20px;
+	clear:both;
+	margin-left: 300px;
+}
+.paging2 a {
+   		font-size:14px;
+        display: inline-block;      
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 8px;
+        border: 1px solid #ccc;
+        color: #000;
+
+    }
+
+#div1 a {
+	color:black;
+}
+#teldiv{
+	border-top:1px solid #ccc;
+	margin-top:30px;
+	clear:both;
+	height:150px;
+}
+#teldiv2{
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+	margin-top:30px;
+	clear:both;
+	height:150px;
+}
+#tel1{
+	float:left;
+	margin-top:20px;
+	width:200px;
+	height:50px;
+}
+#tel2{
+	float:left;
+	margin-top:20px;
+	width:810px;
+	height:50px;
+	font-size:33px;
+	color:#FAAC58;
+	font-weight:bold;
+}
+#tel3{
+	margin-left:200px;
+}
+
+#tel1span{
+	font-size:30px;
+	
+}
+
+
+
+
+ 
+    

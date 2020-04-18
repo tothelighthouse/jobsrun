@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+* {
+	
+	padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+.tobehidden {
+    display: none;
+}
+
+div>div>div {
+    padding: 5px 0px;
+}
+/* a:hover {
+    text-decoration: underline;
+} */
+
+/*** 마이페이지 nav 바 **/
+.myPageNav ul {
+    text-align: center;
+}
+.myPageNav li {
+    display: inline-block;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.myPageNav a {
+    display: block;
+    padding: 5px;
+}
+.myPageNav a:hover {
+    background-color: grey;
+    text-decoration: none;
+}
+
+/*** 끝 마이페이지 nav 바 **/
+.ih {
+    min-height: 100vh;
+}
+
+/***** 페이지 선택 탭 *****/
+
+.ih .select {
+    padding: 5px;
+}
+
+.ih .select ul {
+    text-align: center;
+}
+
+.ih .select li {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+/***** 끝 페이지 선택 탭 *****/
+
+/** 리스트 관리 **************/
+.ih .tableTitle>* {
+    margin: 3px 20px;
+    padding: 0px 10px;
+}
+
+.ih .tableTitle span {
+    font-weight: 600;
+}
+
+.ih .tableTitle a {
+    float: right;
+    font-size: 0.9rem;
+}
+
+    /**** 테이블 공통 속성  ****/
+    .ih .wTable table {
+        width: 100%;
+        text-align: center;
+        padding: 4px 10px;
+    }
+    .ih .wTable tr>* {
+        height: 30px;
+        padding: 0 10px;
+    }
+    .ih .wTable table tr td:not(:nth-child(1)) {
+        min-width: 50px;
+        white-space:nowrap;
+		overflow:hidden; 
+		text-overflow:ellipsis;
+    }
+    .ih .wTable table tr td:nth-child(1) {
+        text-align: left;
+        white-space:nowrap;
+		overflow:hidden; 
+		text-overflow:ellipsis;
+        min-width: 75px;
+        max-width:110px;
+        
+    }
+    /**** 끝 테이블 공통 속성  ****/
+
+    /**** 테이블 head ****/
+    .ih .lists table thead {
+        background-color: gray;
+    }
+    /**** 끝 테이블 head ****/
+
+    /**** 테이블 body ****/
+    .ih .wTable table tbody tr :first-child a {
+        display: block;
+    }
+    .ih .wTable table tbody tr td:nth-child(1):hover {
+        text-decoration: underline;
+    }
+    .ih .wTable table tbody tr td:nth-child(5) {
+        text-align: right;
+    }
+    .ih .wTable table tbody tr:nth-child(odd) {
+        background-color: skyblue;
+    }
+    .ih .wTable table tbody button {
+        font-size: 12px;
+        padding: 3px 5px;
+        cursor: pointer;
+    }
+    .ih .wTable table tbody tr:hover {
+        background-color: lightgray;
+    }
+    /**** 끝 테이블 body ****/
+/** 끝 리스트 관리 **************/
+.ih .dangerZone {
+    margin-top: 20px;
+}
+.ih .dangerZone span {
+    font-weight: 600;
+    margin-left: 40px;
+}
+.ih .dangerZone li {
+    text-align: right;
+    padding: 5px 10px;
+    margin: 5px 5px;
+}
+.ih .dangerZone li a{
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: lightgray;
+    padding: 5px 10px;
+}
+
+/**** 클릭시 화면전환 기능 ****/
+.ih .select input[type="radio"] {
+    display: none;
+}
+.ih .listbox {
+    display: none;
+}
+.ih input[id="client"]:checked ~ .client {
+    display: block;
+}
+.ih input[id="shooter"]:checked ~ .shooter {
+    display: block;
+}
+
+#shootera,#clienta{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:10px;
+	padding-left:10px;
+	border-radius:10px;
+	color:white;
+	background-color:#8258FA;	
+}
+#out{
+	background-color:red;
+	font-weight:bold;
+	color:white;
+}
+#danger{
+	position:relative;
+	right:10px;
+	bottom:10px;
+}

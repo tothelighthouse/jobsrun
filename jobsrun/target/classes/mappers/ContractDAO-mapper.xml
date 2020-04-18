@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.ContractDAO-mapper">
+
+	<!-- 계약 생성 -->
+	<insert id="create" parameterType="ContractVO">
+		INSERT INTO contract (
+		contnum,
+		cbnum,
+		clientid,
+		shooterid,
+		camount
+	
+		) VALUES (
+		CONTRACT_CONTNUM_SEQ.nextval,
+		#{cbnum },
+		#{clientID },
+		#{shooterID },
+		#{camount }
+
+		)
+	</insert>
+	
+	<!-- 계약 완료 -->
+	<update id="contractCompletion"
+			parameterType="long">
+		update contract
+		   set cstatus = 1
+		 where contnum = #{contnum}
+	</update>
+	
+	<!-- 계약 조회 -->
+	<select id="contView"
+			parameterType="long"
+			resultType="ContractVO">
+		select * from contract where contnum = #{contnum}
+	</select>
+	<!-- 글번호로 게시판과 계약 join 하여 계약번호 검색 -->
+	<select id="searchContnum"
+			parameterType="long"
+			resultType="long">
+		select contnum from board t1 join contract t2
+    					 on t1.bnum = t2.cbnum
+    				  where bnum = #{bnum}
+	</select>
+	
+	
+	
+	<!-- 의뢰인의 미 완료 계약 조회 -->
+	<select id="contractNotCompleteList"
+			parameterType="String"
+			resultType="ContractVO">
+		select * from contract where cstatus = 0 and clientID = #{clientID} order by ccdate desc
+	</select>
+	<!-- 의뢰인의 완료 계약 조회 -->
+	<select id="contractCompleteList"
+			parameterType="String"
+			resultType="ContractVO">
+		select * from contract where cstatus = 1 and clientID = #{clientID} order by ccdate desc
+	</select>
+
+	<!-- 해결사의 미 완료 계약 조회 -->
+	<select id="scontractNotCompleteList"
+			parameterType="String"
+			resultType="ContractVO">
+		select * from contract where cstatus = 0 and shooterid = #{shooterID} order by ccdate desc
+	</select>
+	<!-- 해결사의  완료 계약 조회 -->
+	<select id="scontractCompleteList"
+			parameterType="String"
+			resultType="ContractVO">
+		select * from contract where cstatus = 1 and shooterID = #{shooterID} order by ccdate desc
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

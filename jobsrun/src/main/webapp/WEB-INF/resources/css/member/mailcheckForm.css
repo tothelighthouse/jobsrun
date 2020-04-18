@@ -1,0 +1,79 @@
+* {
+	font-family: "Sunflower", sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1024px;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	/* outline: 1px solid; */
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: grid;
+  	grid-template-rows: minmax(100px, auto) auto 200px;
+  	gap: 20px 0;
+}
+
+.container > div {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.mailcheckForm-dh{
+	margin:0 auto;
+	margin-top:100px;
+	height:500px; 
+}
+
+#title{
+	margin-left:20px;
+}
+#p1{
+	margin-left:20px;
+	font-size:25px;
+}
+#li2,#li3{
+	color:#FF6020;
+	margin-top:10px;
+}
+#emailwrap{
+	margin-top:20px;
+}
+#id{
+	margin-left:40px;
+	height:20px;
+	width:330px;
+}
+#ok2wrap{
+	margin-top:13px;
+}
+#ok2{
+	font-size:20px;
+	color:white;
+	background-color:#CEECF5;
+	margin-left:40px;
+	height:40px;
+	width:330px;
+}
+#errwrap{
+	clear:both;
+}
+#errmsg{
+	display:none;
+	margin-left:40px;
+	color:red;
+}
+::placeholder{
+	padding-left:10px;
+	font-size:15px;
+	font-weight:bold;
+}
+
+	

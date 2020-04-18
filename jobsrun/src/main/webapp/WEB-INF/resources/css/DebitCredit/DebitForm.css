@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+
+.ih textarea {
+    width: 588px;
+    padding: 5px;
+}
+.ih .right {
+    text-align: right;
+}
+
+
+.ih * {
+    padding: 0; 
+    margin: 0;
+    list-style-type: none;
+    font-size: 1rem;
+    color: black;
+}
+.ih h1, .ih h2 {
+    text-align: center;
+}
+.ih h1 {
+    font-size: 1.5rem;
+}
+.ih h2 {
+    font-size: 1.2rem;
+}
+
+/**** form ****/
+.ih form {
+    width: 600px;
+    margin: 0 auto;
+}
+.ih .idx {
+    margin-top: 10px;
+    font-weight: 900;
+}
+.ih .idx span {
+    font-size: 1.2rem;
+}
+.ih input[type="number"] {
+    width: 588px;
+    min-height: 30px;
+    padding: 0 5px;
+    border: 1px solid black;
+}
+.ih select {
+    width: 600px;
+    min-height: 32px;
+    padding: 0 5px;
+    border: 1px solid black;
+}
+.ih textarea {
+    border: 1px solid black;
+}
+.ih .btns {
+    width: 600px;
+    text-align: center;
+    margin-top: 20px;
+}
+.ih .btns button {
+    margin: 10px 20px;
+    padding: 10px 30px;
+    font-weight: 900;
+    background-color: lightgray;
+}
+/**** end form ****/
+
+
+
+/**** errMsg ****/
+.ih .errMsg {
+    color: red;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+.ih .tobehidden {
+    display: none;
+}
+/**** end errMsg ****/

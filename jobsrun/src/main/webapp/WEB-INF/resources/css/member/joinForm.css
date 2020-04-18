@@ -1,0 +1,177 @@
+* {
+	font-family: "Sunflower", sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1024px;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	/* outline: 1px solid; */
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: grid;
+  	grid-template-rows: minmax(100px, auto) auto 200px;
+  	gap: 20px 0;
+}
+
+.container > div {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.joinForm-dh{
+ /*  display: grid; */
+  height:650px;
+  margin-top:20px;
+
+}
+
+#title{
+	text-align:center;
+	font-size:25px;
+	color:#44444;
+}
+#formtitle{
+	height:30px;
+	background-color:#ccc;
+}
+#formtitlespan{
+	font-size:20px;
+	color:white;
+	line-height:30px;
+	margin-left:30px;
+}
+.wrapdiv{
+	height:60px;
+	border-bottom:1px solid #ccc;
+}
+.textdiv{
+	font-size:20px;
+	line-height:60px;
+	height:50px;
+	width:140px;
+	margin-left:30px;
+	float:left;
+}
+#emaildiv{
+	margin-left:10px;
+}
+#emailwrapdiv{
+	height:60px;
+}
+::placeholder{
+	font-size:15px;
+}
+#checknumber{
+	clear:both;
+	margin-left:200px;
+}
+b{
+	padding-left:3px;
+	color:red;
+}
+.condiv{
+	float:left;
+	font-size:20px;
+	line-height:60px;
+	height:50px;
+	margin-left:30px;
+}
+
+.inputtext{
+	font-size:20px;
+	width:300px;
+}
+.checkdiv{
+	float:left;
+	line-height:60px;
+	height:50px;
+	margin-left:30px;
+}
+.idcheckBtn, .nickcheckBtn{
+	background-color:black;
+	opacity:0.8px;
+	color:white;
+	font-size:16px;
+	padding:5px;
+}
+.message{
+	float:left;
+	margin-top:20px;
+	margin-left:20px;
+}
+#regionselect{
+	height:30px;
+	font-size:20px;
+}
+#bottom{
+
+	height:100px;
+}
+#joinBtn{
+	padding:5px;
+	padding-left:50px;
+	padding-right:50px;
+	font-size:20px;
+	margin-top:50px;
+	margin-left:370px;
+	background-color:#444444;
+	color:white;
+}
+#cancel{
+	padding:5px;
+	padding-left:50px;
+	padding-right:50px;
+	font-size:20px;
+	margin-top:50px;
+	background-color:#6E6E6E;
+	color:white;
+}
+.regionwrapdiv{
+	height:130px;
+	border-bottom:1px solid #ccc;
+}
+.regioncondiv{
+	margin-left:30px;
+	margin-top:20px;
+	float:left;
+}
+.api{
+	margin-top:5px;
+	height:25px;
+}
+
+#sample6_detailAddress{
+	position:relative;
+	margin-left:5px;
+	width:200px;
+	bottom:36px;
+	left:310px;	
+}
+#sample6_address{
+	width:300px;
+}
+#sample6_extraAddress{
+	margin-left:5px;
+	position:relative;
+	bottom:36px;
+	width:200px;
+	left:310px;
+}
+#saple6_check{
+	background-color:black;
+	opacity:0.8px;
+	color:white;
+	padding:5px;
+	padding-bottom:10px;
+	margin-left:3px;
+}
+
+	

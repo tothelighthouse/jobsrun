@@ -1,0 +1,754 @@
+--------------------------------
+-- board, 의뢰 125, 해결사 125, 합 250개
+-------------------------------- 
+
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test2@test.com','test2','카테고리: 2 | content: 1번째 해결사, test2 입니다! | 작성자: test11번째 해결사, test2 입니다!',null,'이삿짐',60,10000,'1번째 해결사, test2 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test3@test.com','test3','카테고리: 1 | content: 2번째 test3가 의뢰를 합니다 | 작성자: test22번째 test3가 의뢰를 합니다',to_timestamp('20/03/3 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'2번째 test3가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test4@test.com','test4','카테고리: 2 | content: 3번째 해결사, test4 입니다! | 작성자: test33번째 해결사, test4 입니다!',to_timestamp('20/03/4 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'3번째 해결사, test4 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test5@test.com','test5','카테고리: 1 | content: 4번째 test5가 의뢰를 합니다 | 작성자: test44번째 test5가 의뢰를 합니다',null,'청소',30,5000,'4번째 test5가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test6@test.com','test6','카테고리: 2 | content: 5번째 해결사, test6 입니다! | 작성자: test55번째 해결사, test6 입니다!',null,'이삿짐',60,10000,'5번째 해결사, test6 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test7@test.com','test7','카테고리: 1 | content: 6번째 test7가 의뢰를 합니다 | 작성자: test66번째 test7가 의뢰를 합니다',to_timestamp('20/03/7 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'6번째 test7가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test8@test.com','test8','카테고리: 2 | content: 7번째 해결사, test8 입니다! | 작성자: test77번째 해결사, test8 입니다!',to_timestamp('20/03/8 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'7번째 해결사, test8 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test9@test.com','test9','카테고리: 1 | content: 8번째 test9가 의뢰를 합니다 | 작성자: test88번째 test9가 의뢰를 합니다',null,'청소',30,5000,'8번째 test9가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test10@test.com','test10','카테고리: 2 | content: 9번째 해결사, test10 입니다! | 작성자: test99번째 해결사, test10 입니다!',null,'이삿짐',60,10000,'9번째 해결사, test10 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test11@test.com','test11','카테고리: 1 | content: 10번째 test11가 의뢰를 합니다 | 작성자: test1010번째 test11가 의뢰를 합니다',to_timestamp('20/03/11 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'10번째 test11가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test12@test.com','test12','카테고리: 2 | content: 11번째 해결사, test12 입니다! | 작성자: test1111번째 해결사, test12 입니다!',to_timestamp('20/03/12 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'11번째 해결사, test12 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test13@test.com','test13','카테고리: 1 | content: 12번째 test13가 의뢰를 합니다 | 작성자: test1212번째 test13가 의뢰를 합니다',null,'청소',30,5000,'12번째 test13가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test14@test.com','test14','카테고리: 2 | content: 13번째 해결사, test14 입니다! | 작성자: test1313번째 해결사, test14 입니다!',null,'이삿짐',60,10000,'13번째 해결사, test14 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test15@test.com','test15','카테고리: 1 | content: 14번째 test15가 의뢰를 합니다 | 작성자: test1414번째 test15가 의뢰를 합니다',to_timestamp('20/03/15 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'14번째 test15가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test16@test.com','test16','카테고리: 2 | content: 15번째 해결사, test16 입니다! | 작성자: test1515번째 해결사, test16 입니다!',to_timestamp('20/03/16 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'15번째 해결사, test16 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test17@test.com','test17','카테고리: 1 | content: 16번째 test17가 의뢰를 합니다 | 작성자: test1616번째 test17가 의뢰를 합니다',null,'청소',30,5000,'16번째 test17가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test18@test.com','test18','카테고리: 2 | content: 17번째 해결사, test18 입니다! | 작성자: test1717번째 해결사, test18 입니다!',null,'이삿짐',60,10000,'17번째 해결사, test18 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test19@test.com','test19','카테고리: 1 | content: 18번째 test19가 의뢰를 합니다 | 작성자: test1818번째 test19가 의뢰를 합니다',to_timestamp('20/03/19 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'18번째 test19가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test20@test.com','test20','카테고리: 2 | content: 19번째 해결사, test20 입니다! | 작성자: test1919번째 해결사, test20 입니다!',to_timestamp('20/03/20 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'19번째 해결사, test20 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test21@test.com','test21','카테고리: 1 | content: 20번째 test21가 의뢰를 합니다 | 작성자: test2020번째 test21가 의뢰를 합니다',null,'청소',30,5000,'20번째 test21가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test22@test.com','test22','카테고리: 2 | content: 21번째 해결사, test22 입니다! | 작성자: test2121번째 해결사, test22 입니다!',null,'이삿짐',60,10000,'21번째 해결사, test22 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test23@test.com','test23','카테고리: 1 | content: 22번째 test23가 의뢰를 합니다 | 작성자: test2222번째 test23가 의뢰를 합니다',to_timestamp('20/03/23 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'22번째 test23가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test24@test.com','test24','카테고리: 2 | content: 23번째 해결사, test24 입니다! | 작성자: test2323번째 해결사, test24 입니다!',to_timestamp('20/03/24 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'23번째 해결사, test24 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test25@test.com','test25','카테고리: 1 | content: 24번째 test25가 의뢰를 합니다 | 작성자: test2424번째 test25가 의뢰를 합니다',null,'청소',30,5000,'24번째 test25가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test26@test.com','test26','카테고리: 2 | content: 25번째 해결사, test26 입니다! | 작성자: test2525번째 해결사, test26 입니다!',null,'이삿짐',60,10000,'25번째 해결사, test26 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test27@test.com','test27','카테고리: 1 | content: 26번째 test27가 의뢰를 합니다 | 작성자: test2626번째 test27가 의뢰를 합니다',to_timestamp('20/03/27 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'26번째 test27가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test28@test.com','test28','카테고리: 2 | content: 27번째 해결사, test28 입니다! | 작성자: test2727번째 해결사, test28 입니다!',to_timestamp('20/03/28 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'27번째 해결사, test28 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test29@test.com','test29','카테고리: 1 | content: 28번째 test29가 의뢰를 합니다 | 작성자: test2828번째 test29가 의뢰를 합니다',null,'청소',30,5000,'28번째 test29가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test30@test.com','test30','카테고리: 2 | content: 29번째 해결사, test30 입니다! | 작성자: test2929번째 해결사, test30 입니다!',null,'이삿짐',60,10000,'29번째 해결사, test30 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test31@test.com','test31','카테고리: 1 | content: 30번째 test31가 의뢰를 합니다 | 작성자: test3030번째 test31가 의뢰를 합니다',to_timestamp('20/03/1 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'30번째 test31가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test32@test.com','test32','카테고리: 2 | content: 31번째 해결사, test32 입니다! | 작성자: test3131번째 해결사, test32 입니다!',to_timestamp('20/03/2 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'31번째 해결사, test32 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test33@test.com','test33','카테고리: 1 | content: 32번째 test33가 의뢰를 합니다 | 작성자: test3232번째 test33가 의뢰를 합니다',null,'청소',30,5000,'32번째 test33가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test34@test.com','test34','카테고리: 2 | content: 33번째 해결사, test34 입니다! | 작성자: test3333번째 해결사, test34 입니다!',null,'이삿짐',60,10000,'33번째 해결사, test34 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test35@test.com','test35','카테고리: 1 | content: 34번째 test35가 의뢰를 합니다 | 작성자: test3434번째 test35가 의뢰를 합니다',to_timestamp('20/03/5 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'34번째 test35가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test36@test.com','test36','카테고리: 2 | content: 35번째 해결사, test36 입니다! | 작성자: test3535번째 해결사, test36 입니다!',to_timestamp('20/03/6 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'35번째 해결사, test36 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test37@test.com','test37','카테고리: 1 | content: 36번째 test37가 의뢰를 합니다 | 작성자: test3636번째 test37가 의뢰를 합니다',null,'청소',30,5000,'36번째 test37가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test38@test.com','test38','카테고리: 2 | content: 37번째 해결사, test38 입니다! | 작성자: test3737번째 해결사, test38 입니다!',null,'이삿짐',60,10000,'37번째 해결사, test38 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test39@test.com','test39','카테고리: 1 | content: 38번째 test39가 의뢰를 합니다 | 작성자: test3838번째 test39가 의뢰를 합니다',to_timestamp('20/03/9 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'38번째 test39가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test40@test.com','test40','카테고리: 2 | content: 39번째 해결사, test40 입니다! | 작성자: test3939번째 해결사, test40 입니다!',to_timestamp('20/03/10 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'39번째 해결사, test40 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test41@test.com','test41','카테고리: 1 | content: 40번째 test41가 의뢰를 합니다 | 작성자: test4040번째 test41가 의뢰를 합니다',null,'청소',30,5000,'40번째 test41가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test42@test.com','test42','카테고리: 2 | content: 41번째 해결사, test42 입니다! | 작성자: test4141번째 해결사, test42 입니다!',null,'이삿짐',60,10000,'41번째 해결사, test42 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test43@test.com','test43','카테고리: 1 | content: 42번째 test43가 의뢰를 합니다 | 작성자: test4242번째 test43가 의뢰를 합니다',to_timestamp('20/03/13 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'42번째 test43가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test44@test.com','test44','카테고리: 2 | content: 43번째 해결사, test44 입니다! | 작성자: test4343번째 해결사, test44 입니다!',to_timestamp('20/03/14 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'43번째 해결사, test44 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test45@test.com','test45','카테고리: 1 | content: 44번째 test45가 의뢰를 합니다 | 작성자: test4444번째 test45가 의뢰를 합니다',null,'청소',30,5000,'44번째 test45가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test46@test.com','test46','카테고리: 2 | content: 45번째 해결사, test46 입니다! | 작성자: test4545번째 해결사, test46 입니다!',null,'이삿짐',60,10000,'45번째 해결사, test46 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test47@test.com','test47','카테고리: 1 | content: 46번째 test47가 의뢰를 합니다 | 작성자: test4646번째 test47가 의뢰를 합니다',to_timestamp('20/03/17 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'46번째 test47가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test48@test.com','test48','카테고리: 2 | content: 47번째 해결사, test48 입니다! | 작성자: test4747번째 해결사, test48 입니다!',to_timestamp('20/03/18 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'47번째 해결사, test48 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test49@test.com','test49','카테고리: 1 | content: 48번째 test49가 의뢰를 합니다 | 작성자: test4848번째 test49가 의뢰를 합니다',null,'청소',30,5000,'48번째 test49가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test50@test.com','test50','카테고리: 2 | content: 49번째 해결사, test50 입니다! | 작성자: test4949번째 해결사, test50 입니다!',null,'이삿짐',60,10000,'49번째 해결사, test50 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test51@test.com','test51','카테고리: 1 | content: 50번째 test51가 의뢰를 합니다 | 작성자: test5050번째 test51가 의뢰를 합니다',to_timestamp('20/03/21 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'50번째 test51가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test52@test.com','test52','카테고리: 2 | content: 51번째 해결사, test52 입니다! | 작성자: test5151번째 해결사, test52 입니다!',to_timestamp('20/03/22 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'51번째 해결사, test52 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test53@test.com','test53','카테고리: 1 | content: 52번째 test53가 의뢰를 합니다 | 작성자: test5252번째 test53가 의뢰를 합니다',null,'청소',30,5000,'52번째 test53가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test54@test.com','test54','카테고리: 2 | content: 53번째 해결사, test54 입니다! | 작성자: test5353번째 해결사, test54 입니다!',null,'이삿짐',60,10000,'53번째 해결사, test54 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test55@test.com','test55','카테고리: 1 | content: 54번째 test55가 의뢰를 합니다 | 작성자: test5454번째 test55가 의뢰를 합니다',to_timestamp('20/03/25 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'54번째 test55가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test56@test.com','test56','카테고리: 2 | content: 55번째 해결사, test56 입니다! | 작성자: test5555번째 해결사, test56 입니다!',to_timestamp('20/03/26 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'55번째 해결사, test56 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test57@test.com','test57','카테고리: 1 | content: 56번째 test57가 의뢰를 합니다 | 작성자: test5656번째 test57가 의뢰를 합니다',null,'청소',30,5000,'56번째 test57가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test58@test.com','test58','카테고리: 2 | content: 57번째 해결사, test58 입니다! | 작성자: test5757번째 해결사, test58 입니다!',null,'이삿짐',60,10000,'57번째 해결사, test58 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test59@test.com','test59','카테고리: 1 | content: 58번째 test59가 의뢰를 합니다 | 작성자: test5858번째 test59가 의뢰를 합니다',to_timestamp('20/03/29 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'58번째 test59가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test60@test.com','test60','카테고리: 2 | content: 59번째 해결사, test60 입니다! | 작성자: test5959번째 해결사, test60 입니다!',to_timestamp('20/03/30 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'59번째 해결사, test60 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test61@test.com','test61','카테고리: 1 | content: 60번째 test61가 의뢰를 합니다 | 작성자: test6060번째 test61가 의뢰를 합니다',null,'청소',30,5000,'60번째 test61가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test62@test.com','test62','카테고리: 2 | content: 61번째 해결사, test62 입니다! | 작성자: test6161번째 해결사, test62 입니다!',null,'이삿짐',60,10000,'61번째 해결사, test62 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test63@test.com','test63','카테고리: 1 | content: 62번째 test63가 의뢰를 합니다 | 작성자: test6262번째 test63가 의뢰를 합니다',to_timestamp('20/03/3 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'62번째 test63가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test64@test.com','test64','카테고리: 2 | content: 63번째 해결사, test64 입니다! | 작성자: test6363번째 해결사, test64 입니다!',to_timestamp('20/03/4 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'63번째 해결사, test64 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test65@test.com','test65','카테고리: 1 | content: 64번째 test65가 의뢰를 합니다 | 작성자: test6464번째 test65가 의뢰를 합니다',null,'청소',30,5000,'64번째 test65가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test66@test.com','test66','카테고리: 2 | content: 65번째 해결사, test66 입니다! | 작성자: test6565번째 해결사, test66 입니다!',null,'이삿짐',60,10000,'65번째 해결사, test66 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test67@test.com','test67','카테고리: 1 | content: 66번째 test67가 의뢰를 합니다 | 작성자: test6666번째 test67가 의뢰를 합니다',to_timestamp('20/03/7 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'66번째 test67가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test68@test.com','test68','카테고리: 2 | content: 67번째 해결사, test68 입니다! | 작성자: test6767번째 해결사, test68 입니다!',to_timestamp('20/03/8 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'67번째 해결사, test68 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test69@test.com','test69','카테고리: 1 | content: 68번째 test69가 의뢰를 합니다 | 작성자: test6868번째 test69가 의뢰를 합니다',null,'청소',30,5000,'68번째 test69가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test70@test.com','test70','카테고리: 2 | content: 69번째 해결사, test70 입니다! | 작성자: test6969번째 해결사, test70 입니다!',null,'이삿짐',60,10000,'69번째 해결사, test70 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test71@test.com','test71','카테고리: 1 | content: 70번째 test71가 의뢰를 합니다 | 작성자: test7070번째 test71가 의뢰를 합니다',to_timestamp('20/03/11 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'70번째 test71가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test72@test.com','test72','카테고리: 2 | content: 71번째 해결사, test72 입니다! | 작성자: test7171번째 해결사, test72 입니다!',to_timestamp('20/03/12 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'71번째 해결사, test72 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test73@test.com','test73','카테고리: 1 | content: 72번째 test73가 의뢰를 합니다 | 작성자: test7272번째 test73가 의뢰를 합니다',null,'청소',30,5000,'72번째 test73가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test74@test.com','test74','카테고리: 2 | content: 73번째 해결사, test74 입니다! | 작성자: test7373번째 해결사, test74 입니다!',null,'이삿짐',60,10000,'73번째 해결사, test74 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test75@test.com','test75','카테고리: 1 | content: 74번째 test75가 의뢰를 합니다 | 작성자: test7474번째 test75가 의뢰를 합니다',to_timestamp('20/03/15 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'74번째 test75가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test76@test.com','test76','카테고리: 2 | content: 75번째 해결사, test76 입니다! | 작성자: test7575번째 해결사, test76 입니다!',to_timestamp('20/03/16 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'75번째 해결사, test76 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test77@test.com','test77','카테고리: 1 | content: 76번째 test77가 의뢰를 합니다 | 작성자: test7676번째 test77가 의뢰를 합니다',null,'청소',30,5000,'76번째 test77가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test78@test.com','test78','카테고리: 2 | content: 77번째 해결사, test78 입니다! | 작성자: test7777번째 해결사, test78 입니다!',null,'이삿짐',60,10000,'77번째 해결사, test78 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test79@test.com','test79','카테고리: 1 | content: 78번째 test79가 의뢰를 합니다 | 작성자: test7878번째 test79가 의뢰를 합니다',to_timestamp('20/03/19 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'78번째 test79가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test80@test.com','test80','카테고리: 2 | content: 79번째 해결사, test80 입니다! | 작성자: test7979번째 해결사, test80 입니다!',to_timestamp('20/03/20 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'79번째 해결사, test80 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test1@test.com','test1','카테고리: 1 | content: 80번째 test1가 의뢰를 합니다 | 작성자: test080번째 test1가 의뢰를 합니다',null,'청소',30,5000,'80번째 test1가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test2@test.com','test2','카테고리: 2 | content: 81번째 해결사, test2 입니다! | 작성자: test181번째 해결사, test2 입니다!',null,'이삿짐',60,10000,'81번째 해결사, test2 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test3@test.com','test3','카테고리: 1 | content: 82번째 test3가 의뢰를 합니다 | 작성자: test282번째 test3가 의뢰를 합니다',to_timestamp('20/03/23 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'82번째 test3가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test4@test.com','test4','카테고리: 2 | content: 83번째 해결사, test4 입니다! | 작성자: test383번째 해결사, test4 입니다!',to_timestamp('20/03/24 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'83번째 해결사, test4 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test5@test.com','test5','카테고리: 1 | content: 84번째 test5가 의뢰를 합니다 | 작성자: test484번째 test5가 의뢰를 합니다',null,'청소',30,5000,'84번째 test5가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test6@test.com','test6','카테고리: 2 | content: 85번째 해결사, test6 입니다! | 작성자: test585번째 해결사, test6 입니다!',null,'이삿짐',60,10000,'85번째 해결사, test6 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test7@test.com','test7','카테고리: 1 | content: 86번째 test7가 의뢰를 합니다 | 작성자: test686번째 test7가 의뢰를 합니다',to_timestamp('20/03/27 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'86번째 test7가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test8@test.com','test8','카테고리: 2 | content: 87번째 해결사, test8 입니다! | 작성자: test787번째 해결사, test8 입니다!',to_timestamp('20/03/28 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'87번째 해결사, test8 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test9@test.com','test9','카테고리: 1 | content: 88번째 test9가 의뢰를 합니다 | 작성자: test888번째 test9가 의뢰를 합니다',null,'청소',30,5000,'88번째 test9가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test10@test.com','test10','카테고리: 2 | content: 89번째 해결사, test10 입니다! | 작성자: test989번째 해결사, test10 입니다!',null,'이삿짐',60,10000,'89번째 해결사, test10 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test11@test.com','test11','카테고리: 1 | content: 90번째 test11가 의뢰를 합니다 | 작성자: test1090번째 test11가 의뢰를 합니다',to_timestamp('20/03/1 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'90번째 test11가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test12@test.com','test12','카테고리: 2 | content: 91번째 해결사, test12 입니다! | 작성자: test1191번째 해결사, test12 입니다!',to_timestamp('20/03/2 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'91번째 해결사, test12 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test13@test.com','test13','카테고리: 1 | content: 92번째 test13가 의뢰를 합니다 | 작성자: test1292번째 test13가 의뢰를 합니다',null,'청소',30,5000,'92번째 test13가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test14@test.com','test14','카테고리: 2 | content: 93번째 해결사, test14 입니다! | 작성자: test1393번째 해결사, test14 입니다!',null,'이삿짐',60,10000,'93번째 해결사, test14 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test15@test.com','test15','카테고리: 1 | content: 94번째 test15가 의뢰를 합니다 | 작성자: test1494번째 test15가 의뢰를 합니다',to_timestamp('20/03/5 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'94번째 test15가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test16@test.com','test16','카테고리: 2 | content: 95번째 해결사, test16 입니다! | 작성자: test1595번째 해결사, test16 입니다!',to_timestamp('20/03/6 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'95번째 해결사, test16 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test17@test.com','test17','카테고리: 1 | content: 96번째 test17가 의뢰를 합니다 | 작성자: test1696번째 test17가 의뢰를 합니다',null,'청소',30,5000,'96번째 test17가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test18@test.com','test18','카테고리: 2 | content: 97번째 해결사, test18 입니다! | 작성자: test1797번째 해결사, test18 입니다!',null,'이삿짐',60,10000,'97번째 해결사, test18 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test19@test.com','test19','카테고리: 1 | content: 98번째 test19가 의뢰를 합니다 | 작성자: test1898번째 test19가 의뢰를 합니다',to_timestamp('20/03/9 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'98번째 test19가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test20@test.com','test20','카테고리: 2 | content: 99번째 해결사, test20 입니다! | 작성자: test1999번째 해결사, test20 입니다!',to_timestamp('20/03/10 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'99번째 해결사, test20 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test21@test.com','test21','카테고리: 1 | content: 100번째 test21가 의뢰를 합니다 | 작성자: test20100번째 test21가 의뢰를 합니다',null,'청소',30,5000,'100번째 test21가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test22@test.com','test22','카테고리: 2 | content: 101번째 해결사, test22 입니다! | 작성자: test21101번째 해결사, test22 입니다!',null,'이삿짐',60,10000,'101번째 해결사, test22 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test23@test.com','test23','카테고리: 1 | content: 102번째 test23가 의뢰를 합니다 | 작성자: test22102번째 test23가 의뢰를 합니다',to_timestamp('20/03/13 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'102번째 test23가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test24@test.com','test24','카테고리: 2 | content: 103번째 해결사, test24 입니다! | 작성자: test23103번째 해결사, test24 입니다!',to_timestamp('20/03/14 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'103번째 해결사, test24 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test25@test.com','test25','카테고리: 1 | content: 104번째 test25가 의뢰를 합니다 | 작성자: test24104번째 test25가 의뢰를 합니다',null,'청소',30,5000,'104번째 test25가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test26@test.com','test26','카테고리: 2 | content: 105번째 해결사, test26 입니다! | 작성자: test25105번째 해결사, test26 입니다!',null,'이삿짐',60,10000,'105번째 해결사, test26 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test27@test.com','test27','카테고리: 1 | content: 106번째 test27가 의뢰를 합니다 | 작성자: test26106번째 test27가 의뢰를 합니다',to_timestamp('20/03/17 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'106번째 test27가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test28@test.com','test28','카테고리: 2 | content: 107번째 해결사, test28 입니다! | 작성자: test27107번째 해결사, test28 입니다!',to_timestamp('20/03/18 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'107번째 해결사, test28 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test29@test.com','test29','카테고리: 1 | content: 108번째 test29가 의뢰를 합니다 | 작성자: test28108번째 test29가 의뢰를 합니다',null,'청소',30,5000,'108번째 test29가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test30@test.com','test30','카테고리: 2 | content: 109번째 해결사, test30 입니다! | 작성자: test29109번째 해결사, test30 입니다!',null,'이삿짐',60,10000,'109번째 해결사, test30 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test31@test.com','test31','카테고리: 1 | content: 110번째 test31가 의뢰를 합니다 | 작성자: test30110번째 test31가 의뢰를 합니다',to_timestamp('20/03/21 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'110번째 test31가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test32@test.com','test32','카테고리: 2 | content: 111번째 해결사, test32 입니다! | 작성자: test31111번째 해결사, test32 입니다!',to_timestamp('20/03/22 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'111번째 해결사, test32 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test33@test.com','test33','카테고리: 1 | content: 112번째 test33가 의뢰를 합니다 | 작성자: test32112번째 test33가 의뢰를 합니다',null,'청소',30,5000,'112번째 test33가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test34@test.com','test34','카테고리: 2 | content: 113번째 해결사, test34 입니다! | 작성자: test33113번째 해결사, test34 입니다!',null,'이삿짐',60,10000,'113번째 해결사, test34 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test35@test.com','test35','카테고리: 1 | content: 114번째 test35가 의뢰를 합니다 | 작성자: test34114번째 test35가 의뢰를 합니다',to_timestamp('20/03/25 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'114번째 test35가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test36@test.com','test36','카테고리: 2 | content: 115번째 해결사, test36 입니다! | 작성자: test35115번째 해결사, test36 입니다!',to_timestamp('20/03/26 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'115번째 해결사, test36 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test37@test.com','test37','카테고리: 1 | content: 116번째 test37가 의뢰를 합니다 | 작성자: test36116번째 test37가 의뢰를 합니다',null,'청소',30,5000,'116번째 test37가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test38@test.com','test38','카테고리: 2 | content: 117번째 해결사, test38 입니다! | 작성자: test37117번째 해결사, test38 입니다!',null,'이삿짐',60,10000,'117번째 해결사, test38 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test39@test.com','test39','카테고리: 1 | content: 118번째 test39가 의뢰를 합니다 | 작성자: test38118번째 test39가 의뢰를 합니다',to_timestamp('20/03/29 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'118번째 test39가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test40@test.com','test40','카테고리: 2 | content: 119번째 해결사, test40 입니다! | 작성자: test39119번째 해결사, test40 입니다!',to_timestamp('20/03/30 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'119번째 해결사, test40 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test41@test.com','test41','카테고리: 1 | content: 120번째 test41가 의뢰를 합니다 | 작성자: test40120번째 test41가 의뢰를 합니다',null,'청소',30,5000,'120번째 test41가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test42@test.com','test42','카테고리: 2 | content: 121번째 해결사, test42 입니다! | 작성자: test41121번째 해결사, test42 입니다!',null,'이삿짐',60,10000,'121번째 해결사, test42 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test43@test.com','test43','카테고리: 1 | content: 122번째 test43가 의뢰를 합니다 | 작성자: test42122번째 test43가 의뢰를 합니다',to_timestamp('20/03/3 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'122번째 test43가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test44@test.com','test44','카테고리: 2 | content: 123번째 해결사, test44 입니다! | 작성자: test43123번째 해결사, test44 입니다!',to_timestamp('20/03/4 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'123번째 해결사, test44 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test45@test.com','test45','카테고리: 1 | content: 124번째 test45가 의뢰를 합니다 | 작성자: test44124번째 test45가 의뢰를 합니다',null,'청소',30,5000,'124번째 test45가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test46@test.com','test46','카테고리: 2 | content: 125번째 해결사, test46 입니다! | 작성자: test45125번째 해결사, test46 입니다!',null,'이삿짐',60,10000,'125번째 해결사, test46 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test47@test.com','test47','카테고리: 1 | content: 126번째 test47가 의뢰를 합니다 | 작성자: test46126번째 test47가 의뢰를 합니다',to_timestamp('20/03/7 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'126번째 test47가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test48@test.com','test48','카테고리: 2 | content: 127번째 해결사, test48 입니다! | 작성자: test47127번째 해결사, test48 입니다!',to_timestamp('20/03/8 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'127번째 해결사, test48 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test49@test.com','test49','카테고리: 1 | content: 128번째 test49가 의뢰를 합니다 | 작성자: test48128번째 test49가 의뢰를 합니다',null,'청소',30,5000,'128번째 test49가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test50@test.com','test50','카테고리: 2 | content: 129번째 해결사, test50 입니다! | 작성자: test49129번째 해결사, test50 입니다!',null,'이삿짐',60,10000,'129번째 해결사, test50 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test51@test.com','test51','카테고리: 1 | content: 130번째 test51가 의뢰를 합니다 | 작성자: test50130번째 test51가 의뢰를 합니다',to_timestamp('20/03/11 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'130번째 test51가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test52@test.com','test52','카테고리: 2 | content: 131번째 해결사, test52 입니다! | 작성자: test51131번째 해결사, test52 입니다!',to_timestamp('20/03/12 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'131번째 해결사, test52 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test53@test.com','test53','카테고리: 1 | content: 132번째 test53가 의뢰를 합니다 | 작성자: test52132번째 test53가 의뢰를 합니다',null,'청소',30,5000,'132번째 test53가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test54@test.com','test54','카테고리: 2 | content: 133번째 해결사, test54 입니다! | 작성자: test53133번째 해결사, test54 입니다!',null,'이삿짐',60,10000,'133번째 해결사, test54 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test55@test.com','test55','카테고리: 1 | content: 134번째 test55가 의뢰를 합니다 | 작성자: test54134번째 test55가 의뢰를 합니다',to_timestamp('20/03/15 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'134번째 test55가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test56@test.com','test56','카테고리: 2 | content: 135번째 해결사, test56 입니다! | 작성자: test55135번째 해결사, test56 입니다!',to_timestamp('20/03/16 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'135번째 해결사, test56 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test57@test.com','test57','카테고리: 1 | content: 136번째 test57가 의뢰를 합니다 | 작성자: test56136번째 test57가 의뢰를 합니다',null,'청소',30,5000,'136번째 test57가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test58@test.com','test58','카테고리: 2 | content: 137번째 해결사, test58 입니다! | 작성자: test57137번째 해결사, test58 입니다!',null,'이삿짐',60,10000,'137번째 해결사, test58 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test59@test.com','test59','카테고리: 1 | content: 138번째 test59가 의뢰를 합니다 | 작성자: test58138번째 test59가 의뢰를 합니다',to_timestamp('20/03/19 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'138번째 test59가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test60@test.com','test60','카테고리: 2 | content: 139번째 해결사, test60 입니다! | 작성자: test59139번째 해결사, test60 입니다!',to_timestamp('20/03/20 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'139번째 해결사, test60 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test61@test.com','test61','카테고리: 1 | content: 140번째 test61가 의뢰를 합니다 | 작성자: test60140번째 test61가 의뢰를 합니다',null,'청소',30,5000,'140번째 test61가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test62@test.com','test62','카테고리: 2 | content: 141번째 해결사, test62 입니다! | 작성자: test61141번째 해결사, test62 입니다!',null,'이삿짐',60,10000,'141번째 해결사, test62 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test63@test.com','test63','카테고리: 1 | content: 142번째 test63가 의뢰를 합니다 | 작성자: test62142번째 test63가 의뢰를 합니다',to_timestamp('20/03/23 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'142번째 test63가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test64@test.com','test64','카테고리: 2 | content: 143번째 해결사, test64 입니다! | 작성자: test63143번째 해결사, test64 입니다!',to_timestamp('20/03/24 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'143번째 해결사, test64 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test65@test.com','test65','카테고리: 1 | content: 144번째 test65가 의뢰를 합니다 | 작성자: test64144번째 test65가 의뢰를 합니다',null,'청소',30,5000,'144번째 test65가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test66@test.com','test66','카테고리: 2 | content: 145번째 해결사, test66 입니다! | 작성자: test65145번째 해결사, test66 입니다!',null,'이삿짐',60,10000,'145번째 해결사, test66 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test67@test.com','test67','카테고리: 1 | content: 146번째 test67가 의뢰를 합니다 | 작성자: test66146번째 test67가 의뢰를 합니다',to_timestamp('20/03/27 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'146번째 test67가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test68@test.com','test68','카테고리: 2 | content: 147번째 해결사, test68 입니다! | 작성자: test67147번째 해결사, test68 입니다!',to_timestamp('20/03/28 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'147번째 해결사, test68 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test69@test.com','test69','카테고리: 1 | content: 148번째 test69가 의뢰를 합니다 | 작성자: test68148번째 test69가 의뢰를 합니다',null,'청소',30,5000,'148번째 test69가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test70@test.com','test70','카테고리: 2 | content: 149번째 해결사, test70 입니다! | 작성자: test69149번째 해결사, test70 입니다!',null,'이삿짐',60,10000,'149번째 해결사, test70 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test71@test.com','test71','카테고리: 1 | content: 150번째 test71가 의뢰를 합니다 | 작성자: test70150번째 test71가 의뢰를 합니다',to_timestamp('20/03/1 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'150번째 test71가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test72@test.com','test72','카테고리: 2 | content: 151번째 해결사, test72 입니다! | 작성자: test71151번째 해결사, test72 입니다!',to_timestamp('20/03/2 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'151번째 해결사, test72 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test73@test.com','test73','카테고리: 1 | content: 152번째 test73가 의뢰를 합니다 | 작성자: test72152번째 test73가 의뢰를 합니다',null,'청소',30,5000,'152번째 test73가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test74@test.com','test74','카테고리: 2 | content: 153번째 해결사, test74 입니다! | 작성자: test73153번째 해결사, test74 입니다!',null,'이삿짐',60,10000,'153번째 해결사, test74 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test75@test.com','test75','카테고리: 1 | content: 154번째 test75가 의뢰를 합니다 | 작성자: test74154번째 test75가 의뢰를 합니다',to_timestamp('20/03/5 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'154번째 test75가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test76@test.com','test76','카테고리: 2 | content: 155번째 해결사, test76 입니다! | 작성자: test75155번째 해결사, test76 입니다!',to_timestamp('20/03/6 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'155번째 해결사, test76 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test77@test.com','test77','카테고리: 1 | content: 156번째 test77가 의뢰를 합니다 | 작성자: test76156번째 test77가 의뢰를 합니다',null,'청소',30,5000,'156번째 test77가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test78@test.com','test78','카테고리: 2 | content: 157번째 해결사, test78 입니다! | 작성자: test77157번째 해결사, test78 입니다!',null,'이삿짐',60,10000,'157번째 해결사, test78 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test79@test.com','test79','카테고리: 1 | content: 158번째 test79가 의뢰를 합니다 | 작성자: test78158번째 test79가 의뢰를 합니다',to_timestamp('20/03/9 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'158번째 test79가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test80@test.com','test80','카테고리: 2 | content: 159번째 해결사, test80 입니다! | 작성자: test79159번째 해결사, test80 입니다!',to_timestamp('20/03/10 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'159번째 해결사, test80 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test1@test.com','test1','카테고리: 1 | content: 160번째 test1가 의뢰를 합니다 | 작성자: test0160번째 test1가 의뢰를 합니다',null,'청소',30,5000,'160번째 test1가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test2@test.com','test2','카테고리: 2 | content: 161번째 해결사, test2 입니다! | 작성자: test1161번째 해결사, test2 입니다!',null,'이삿짐',60,10000,'161번째 해결사, test2 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test3@test.com','test3','카테고리: 1 | content: 162번째 test3가 의뢰를 합니다 | 작성자: test2162번째 test3가 의뢰를 합니다',to_timestamp('20/03/13 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'162번째 test3가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test4@test.com','test4','카테고리: 2 | content: 163번째 해결사, test4 입니다! | 작성자: test3163번째 해결사, test4 입니다!',to_timestamp('20/03/14 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'163번째 해결사, test4 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test5@test.com','test5','카테고리: 1 | content: 164번째 test5가 의뢰를 합니다 | 작성자: test4164번째 test5가 의뢰를 합니다',null,'청소',30,5000,'164번째 test5가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test6@test.com','test6','카테고리: 2 | content: 165번째 해결사, test6 입니다! | 작성자: test5165번째 해결사, test6 입니다!',null,'이삿짐',60,10000,'165번째 해결사, test6 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test7@test.com','test7','카테고리: 1 | content: 166번째 test7가 의뢰를 합니다 | 작성자: test6166번째 test7가 의뢰를 합니다',to_timestamp('20/03/17 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'166번째 test7가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test8@test.com','test8','카테고리: 2 | content: 167번째 해결사, test8 입니다! | 작성자: test7167번째 해결사, test8 입니다!',to_timestamp('20/03/18 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'167번째 해결사, test8 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test9@test.com','test9','카테고리: 1 | content: 168번째 test9가 의뢰를 합니다 | 작성자: test8168번째 test9가 의뢰를 합니다',null,'청소',30,5000,'168번째 test9가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test10@test.com','test10','카테고리: 2 | content: 169번째 해결사, test10 입니다! | 작성자: test9169번째 해결사, test10 입니다!',null,'이삿짐',60,10000,'169번째 해결사, test10 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test11@test.com','test11','카테고리: 1 | content: 170번째 test11가 의뢰를 합니다 | 작성자: test10170번째 test11가 의뢰를 합니다',to_timestamp('20/03/21 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'170번째 test11가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test12@test.com','test12','카테고리: 2 | content: 171번째 해결사, test12 입니다! | 작성자: test11171번째 해결사, test12 입니다!',to_timestamp('20/03/22 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'171번째 해결사, test12 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test13@test.com','test13','카테고리: 1 | content: 172번째 test13가 의뢰를 합니다 | 작성자: test12172번째 test13가 의뢰를 합니다',null,'청소',30,5000,'172번째 test13가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test14@test.com','test14','카테고리: 2 | content: 173번째 해결사, test14 입니다! | 작성자: test13173번째 해결사, test14 입니다!',null,'이삿짐',60,10000,'173번째 해결사, test14 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test15@test.com','test15','카테고리: 1 | content: 174번째 test15가 의뢰를 합니다 | 작성자: test14174번째 test15가 의뢰를 합니다',to_timestamp('20/03/25 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'174번째 test15가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test16@test.com','test16','카테고리: 2 | content: 175번째 해결사, test16 입니다! | 작성자: test15175번째 해결사, test16 입니다!',to_timestamp('20/03/26 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'175번째 해결사, test16 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test17@test.com','test17','카테고리: 1 | content: 176번째 test17가 의뢰를 합니다 | 작성자: test16176번째 test17가 의뢰를 합니다',null,'청소',30,5000,'176번째 test17가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test18@test.com','test18','카테고리: 2 | content: 177번째 해결사, test18 입니다! | 작성자: test17177번째 해결사, test18 입니다!',null,'이삿짐',60,10000,'177번째 해결사, test18 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test19@test.com','test19','카테고리: 1 | content: 178번째 test19가 의뢰를 합니다 | 작성자: test18178번째 test19가 의뢰를 합니다',to_timestamp('20/03/29 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'178번째 test19가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test20@test.com','test20','카테고리: 2 | content: 179번째 해결사, test20 입니다! | 작성자: test19179번째 해결사, test20 입니다!',to_timestamp('20/03/30 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'179번째 해결사, test20 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test21@test.com','test21','카테고리: 1 | content: 180번째 test21가 의뢰를 합니다 | 작성자: test20180번째 test21가 의뢰를 합니다',null,'청소',30,5000,'180번째 test21가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test22@test.com','test22','카테고리: 2 | content: 181번째 해결사, test22 입니다! | 작성자: test21181번째 해결사, test22 입니다!',null,'이삿짐',60,10000,'181번째 해결사, test22 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test23@test.com','test23','카테고리: 1 | content: 182번째 test23가 의뢰를 합니다 | 작성자: test22182번째 test23가 의뢰를 합니다',to_timestamp('20/03/3 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'182번째 test23가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test24@test.com','test24','카테고리: 2 | content: 183번째 해결사, test24 입니다! | 작성자: test23183번째 해결사, test24 입니다!',to_timestamp('20/03/4 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'183번째 해결사, test24 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test25@test.com','test25','카테고리: 1 | content: 184번째 test25가 의뢰를 합니다 | 작성자: test24184번째 test25가 의뢰를 합니다',null,'청소',30,5000,'184번째 test25가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test26@test.com','test26','카테고리: 2 | content: 185번째 해결사, test26 입니다! | 작성자: test25185번째 해결사, test26 입니다!',null,'이삿짐',60,10000,'185번째 해결사, test26 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test27@test.com','test27','카테고리: 1 | content: 186번째 test27가 의뢰를 합니다 | 작성자: test26186번째 test27가 의뢰를 합니다',to_timestamp('20/03/7 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'186번째 test27가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test28@test.com','test28','카테고리: 2 | content: 187번째 해결사, test28 입니다! | 작성자: test27187번째 해결사, test28 입니다!',to_timestamp('20/03/8 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'187번째 해결사, test28 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test29@test.com','test29','카테고리: 1 | content: 188번째 test29가 의뢰를 합니다 | 작성자: test28188번째 test29가 의뢰를 합니다',null,'청소',30,5000,'188번째 test29가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test30@test.com','test30','카테고리: 2 | content: 189번째 해결사, test30 입니다! | 작성자: test29189번째 해결사, test30 입니다!',null,'이삿짐',60,10000,'189번째 해결사, test30 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test31@test.com','test31','카테고리: 1 | content: 190번째 test31가 의뢰를 합니다 | 작성자: test30190번째 test31가 의뢰를 합니다',to_timestamp('20/03/11 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'190번째 test31가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test32@test.com','test32','카테고리: 2 | content: 191번째 해결사, test32 입니다! | 작성자: test31191번째 해결사, test32 입니다!',to_timestamp('20/03/12 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'191번째 해결사, test32 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test33@test.com','test33','카테고리: 1 | content: 192번째 test33가 의뢰를 합니다 | 작성자: test32192번째 test33가 의뢰를 합니다',null,'청소',30,5000,'192번째 test33가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test34@test.com','test34','카테고리: 2 | content: 193번째 해결사, test34 입니다! | 작성자: test33193번째 해결사, test34 입니다!',null,'이삿짐',60,10000,'193번째 해결사, test34 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test35@test.com','test35','카테고리: 1 | content: 194번째 test35가 의뢰를 합니다 | 작성자: test34194번째 test35가 의뢰를 합니다',to_timestamp('20/03/15 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'194번째 test35가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test36@test.com','test36','카테고리: 2 | content: 195번째 해결사, test36 입니다! | 작성자: test35195번째 해결사, test36 입니다!',to_timestamp('20/03/16 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'195번째 해결사, test36 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test37@test.com','test37','카테고리: 1 | content: 196번째 test37가 의뢰를 합니다 | 작성자: test36196번째 test37가 의뢰를 합니다',null,'청소',30,5000,'196번째 test37가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test38@test.com','test38','카테고리: 2 | content: 197번째 해결사, test38 입니다! | 작성자: test37197번째 해결사, test38 입니다!',null,'이삿짐',60,10000,'197번째 해결사, test38 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test39@test.com','test39','카테고리: 1 | content: 198번째 test39가 의뢰를 합니다 | 작성자: test38198번째 test39가 의뢰를 합니다',to_timestamp('20/03/19 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'198번째 test39가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test40@test.com','test40','카테고리: 2 | content: 199번째 해결사, test40 입니다! | 작성자: test39199번째 해결사, test40 입니다!',to_timestamp('20/03/20 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'199번째 해결사, test40 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test41@test.com','test41','카테고리: 1 | content: 200번째 test41가 의뢰를 합니다 | 작성자: test40200번째 test41가 의뢰를 합니다',null,'청소',30,5000,'200번째 test41가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test42@test.com','test42','카테고리: 2 | content: 201번째 해결사, test42 입니다! | 작성자: test41201번째 해결사, test42 입니다!',null,'이삿짐',60,10000,'201번째 해결사, test42 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test43@test.com','test43','카테고리: 1 | content: 202번째 test43가 의뢰를 합니다 | 작성자: test42202번째 test43가 의뢰를 합니다',to_timestamp('20/03/23 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'202번째 test43가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test44@test.com','test44','카테고리: 2 | content: 203번째 해결사, test44 입니다! | 작성자: test43203번째 해결사, test44 입니다!',to_timestamp('20/03/24 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'203번째 해결사, test44 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test45@test.com','test45','카테고리: 1 | content: 204번째 test45가 의뢰를 합니다 | 작성자: test44204번째 test45가 의뢰를 합니다',null,'청소',30,5000,'204번째 test45가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test46@test.com','test46','카테고리: 2 | content: 205번째 해결사, test46 입니다! | 작성자: test45205번째 해결사, test46 입니다!',null,'이삿짐',60,10000,'205번째 해결사, test46 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test47@test.com','test47','카테고리: 1 | content: 206번째 test47가 의뢰를 합니다 | 작성자: test46206번째 test47가 의뢰를 합니다',to_timestamp('20/03/27 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'206번째 test47가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test48@test.com','test48','카테고리: 2 | content: 207번째 해결사, test48 입니다! | 작성자: test47207번째 해결사, test48 입니다!',to_timestamp('20/03/28 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'207번째 해결사, test48 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test49@test.com','test49','카테고리: 1 | content: 208번째 test49가 의뢰를 합니다 | 작성자: test48208번째 test49가 의뢰를 합니다',null,'청소',30,5000,'208번째 test49가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test50@test.com','test50','카테고리: 2 | content: 209번째 해결사, test50 입니다! | 작성자: test49209번째 해결사, test50 입니다!',null,'이삿짐',60,10000,'209번째 해결사, test50 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test51@test.com','test51','카테고리: 1 | content: 210번째 test51가 의뢰를 합니다 | 작성자: test50210번째 test51가 의뢰를 합니다',to_timestamp('20/03/1 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'210번째 test51가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test52@test.com','test52','카테고리: 2 | content: 211번째 해결사, test52 입니다! | 작성자: test51211번째 해결사, test52 입니다!',to_timestamp('20/03/2 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'211번째 해결사, test52 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test53@test.com','test53','카테고리: 1 | content: 212번째 test53가 의뢰를 합니다 | 작성자: test52212번째 test53가 의뢰를 합니다',null,'청소',30,5000,'212번째 test53가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test54@test.com','test54','카테고리: 2 | content: 213번째 해결사, test54 입니다! | 작성자: test53213번째 해결사, test54 입니다!',null,'이삿짐',60,10000,'213번째 해결사, test54 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test55@test.com','test55','카테고리: 1 | content: 214번째 test55가 의뢰를 합니다 | 작성자: test54214번째 test55가 의뢰를 합니다',to_timestamp('20/03/5 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'214번째 test55가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test56@test.com','test56','카테고리: 2 | content: 215번째 해결사, test56 입니다! | 작성자: test55215번째 해결사, test56 입니다!',to_timestamp('20/03/6 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'215번째 해결사, test56 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test57@test.com','test57','카테고리: 1 | content: 216번째 test57가 의뢰를 합니다 | 작성자: test56216번째 test57가 의뢰를 합니다',null,'청소',30,5000,'216번째 test57가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test58@test.com','test58','카테고리: 2 | content: 217번째 해결사, test58 입니다! | 작성자: test57217번째 해결사, test58 입니다!',null,'이삿짐',60,10000,'217번째 해결사, test58 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test59@test.com','test59','카테고리: 1 | content: 218번째 test59가 의뢰를 합니다 | 작성자: test58218번째 test59가 의뢰를 합니다',to_timestamp('20/03/9 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'218번째 test59가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test60@test.com','test60','카테고리: 2 | content: 219번째 해결사, test60 입니다! | 작성자: test59219번째 해결사, test60 입니다!',to_timestamp('20/03/10 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'219번째 해결사, test60 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test61@test.com','test61','카테고리: 1 | content: 220번째 test61가 의뢰를 합니다 | 작성자: test60220번째 test61가 의뢰를 합니다',null,'청소',30,5000,'220번째 test61가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test62@test.com','test62','카테고리: 2 | content: 221번째 해결사, test62 입니다! | 작성자: test61221번째 해결사, test62 입니다!',null,'이삿짐',60,10000,'221번째 해결사, test62 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test63@test.com','test63','카테고리: 1 | content: 222번째 test63가 의뢰를 합니다 | 작성자: test62222번째 test63가 의뢰를 합니다',to_timestamp('20/03/13 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'222번째 test63가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test64@test.com','test64','카테고리: 2 | content: 223번째 해결사, test64 입니다! | 작성자: test63223번째 해결사, test64 입니다!',to_timestamp('20/03/14 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'223번째 해결사, test64 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test65@test.com','test65','카테고리: 1 | content: 224번째 test65가 의뢰를 합니다 | 작성자: test64224번째 test65가 의뢰를 합니다',null,'청소',30,5000,'224번째 test65가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test66@test.com','test66','카테고리: 2 | content: 225번째 해결사, test66 입니다! | 작성자: test65225번째 해결사, test66 입니다!',null,'이삿짐',60,10000,'225번째 해결사, test66 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test67@test.com','test67','카테고리: 1 | content: 226번째 test67가 의뢰를 합니다 | 작성자: test66226번째 test67가 의뢰를 합니다',to_timestamp('20/03/17 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'226번째 test67가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test68@test.com','test68','카테고리: 2 | content: 227번째 해결사, test68 입니다! | 작성자: test67227번째 해결사, test68 입니다!',to_timestamp('20/03/18 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'227번째 해결사, test68 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test69@test.com','test69','카테고리: 1 | content: 228번째 test69가 의뢰를 합니다 | 작성자: test68228번째 test69가 의뢰를 합니다',null,'청소',30,5000,'228번째 test69가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test70@test.com','test70','카테고리: 2 | content: 229번째 해결사, test70 입니다! | 작성자: test69229번째 해결사, test70 입니다!',null,'이삿짐',60,10000,'229번째 해결사, test70 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test71@test.com','test71','카테고리: 1 | content: 230번째 test71가 의뢰를 합니다 | 작성자: test70230번째 test71가 의뢰를 합니다',to_timestamp('20/03/21 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'230번째 test71가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test72@test.com','test72','카테고리: 2 | content: 231번째 해결사, test72 입니다! | 작성자: test71231번째 해결사, test72 입니다!',to_timestamp('20/03/22 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'231번째 해결사, test72 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test73@test.com','test73','카테고리: 1 | content: 232번째 test73가 의뢰를 합니다 | 작성자: test72232번째 test73가 의뢰를 합니다',null,'청소',30,5000,'232번째 test73가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test74@test.com','test74','카테고리: 2 | content: 233번째 해결사, test74 입니다! | 작성자: test73233번째 해결사, test74 입니다!',null,'이삿짐',60,10000,'233번째 해결사, test74 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test75@test.com','test75','카테고리: 1 | content: 234번째 test75가 의뢰를 합니다 | 작성자: test74234번째 test75가 의뢰를 합니다',to_timestamp('20/03/25 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'234번째 test75가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test76@test.com','test76','카테고리: 2 | content: 235번째 해결사, test76 입니다! | 작성자: test75235번째 해결사, test76 입니다!',to_timestamp('20/03/26 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'235번째 해결사, test76 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test77@test.com','test77','카테고리: 1 | content: 236번째 test77가 의뢰를 합니다 | 작성자: test76236번째 test77가 의뢰를 합니다',null,'청소',30,5000,'236번째 test77가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'부산','test78@test.com','test78','카테고리: 2 | content: 237번째 해결사, test78 입니다! | 작성자: test77237번째 해결사, test78 입니다!',null,'이삿짐',60,10000,'237번째 해결사, test78 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'제주','test79@test.com','test79','카테고리: 1 | content: 238번째 test79가 의뢰를 합니다 | 작성자: test78238번째 test79가 의뢰를 합니다',to_timestamp('20/03/29 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'238번째 test79가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'서울','test80@test.com','test80','카테고리: 2 | content: 239번째 해결사, test80 입니다! | 작성자: test79239번째 해결사, test80 입니다!',to_timestamp('20/03/30 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'239번째 해결사, test80 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'광주','test1@test.com','test1','카테고리: 1 | content: 240번째 test1가 의뢰를 합니다 | 작성자: test0240번째 test1가 의뢰를 합니다',null,'청소',30,5000,'240번째 test1가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대전','test2@test.com','test2','카테고리: 2 | content: 241번째 해결사, test2 입니다! | 작성자: test1241번째 해결사, test2 입니다!',null,'이삿짐',60,10000,'241번째 해결사, test2 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대구','test3@test.com','test3','카테고리: 1 | content: 242번째 test3가 의뢰를 합니다 | 작성자: test2242번째 test3가 의뢰를 합니다',to_timestamp('20/03/3 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'242번째 test3가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'울산','test4@test.com','test4','카테고리: 2 | content: 243번째 해결사, test4 입니다! | 작성자: test3243번째 해결사, test4 입니다!',to_timestamp('20/03/4 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'243번째 해결사, test4 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'부산','test5@test.com','test5','카테고리: 1 | content: 244번째 test5가 의뢰를 합니다 | 작성자: test4244번째 test5가 의뢰를 합니다',null,'청소',30,5000,'244번째 test5가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'제주','test6@test.com','test6','카테고리: 2 | content: 245번째 해결사, test6 입니다! | 작성자: test5245번째 해결사, test6 입니다!',null,'이삿짐',60,10000,'245번째 해결사, test6 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'서울','test7@test.com','test7','카테고리: 1 | content: 246번째 test7가 의뢰를 합니다 | 작성자: test6246번째 test7가 의뢰를 합니다',to_timestamp('20/03/7 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'246번째 test7가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'광주','test8@test.com','test8','카테고리: 2 | content: 247번째 해결사, test8 입니다! | 작성자: test7247번째 해결사, test8 입니다!',to_timestamp('20/03/8 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'경비',120,20000,'247번째 해결사, test8 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'대전','test9@test.com','test9','카테고리: 1 | content: 248번째 test9가 의뢰를 합니다 | 작성자: test8248번째 test9가 의뢰를 합니다',null,'청소',30,5000,'248번째 test9가 의뢰를 합니다' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,2,'대구','test10@test.com','test10','카테고리: 2 | content: 249번째 해결사, test10 입니다! | 작성자: test9249번째 해결사, test10 입니다!',null,'이삿짐',60,10000,'249번째 해결사, test10 입니다!' 
+);
+INSERT INTO BOARD (BNUM ,BBCID ,BLOCATION ,BID,BNICKNAME ,BCONTENT ,SDATETIME ,JOB ,DURATION ,PAYMENT ,BTITLE) VALUES ( 
+BOARD_BNUM_SEQ.NEXTVAL,1,'울산','test11@test.com','test11','카테고리: 1 | content: 250번째 test11가 의뢰를 합니다 | 작성자: test10250번째 test11가 의뢰를 합니다',to_timestamp('20/03/11 20:46:17.667000000','RR/MM/DD HH24:MI:SSXFF'),'카운터',90,15000,'250번째 test11가 의뢰를 합니다' 
+);

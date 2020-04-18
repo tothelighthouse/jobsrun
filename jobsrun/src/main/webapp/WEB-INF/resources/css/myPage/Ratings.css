@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+
+/************************************/
+
+/***** 전체 레이 아웃 *****/
+.ih * {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+.ih {
+    display: flex;
+    min-height: 100vh;
+}
+.ih .receiver {
+    width: 300px;
+    margin-right: 10px;
+}
+.ih .thrower {
+    flex:1;
+}
+/***** 끝 전체 레이 아웃 *****/
+
+/***** 평가 받는 사람 *****/
+.ih .receiver {
+    background-color: #F5EFFB;
+    text-align: center;
+}
+.ih .receiver>div>* {
+    padding: 5px;
+}
+.ih .receiver .info p {
+    padding: 0 20px;
+}
+.ih .receiver span {
+    font-weight: 900;;
+    font-size: 1.5rem;
+}
+.ih .receiver img {
+    width: 200px;
+    height: 200px;
+    margin: 30px 10px 10px 10px;
+    border-radius: 50px;
+}
+.ih .receiver table {
+    width: 100%;
+    font-weight: 900;
+}
+/***** 끝 평가 받는 사람 *****/
+
+
+/***** 지난 평가 *****/
+.ih .thrower .pasts {
+    padding: 10px;
+}
+.ih .thrower .past {
+    margin: 10px 0px;
+    padding: 3px;
+    display: flex;
+}
+.ih .thrower .past>div>div:first-child {
+    padding: 4px 0;
+    font-weight: 700;
+}
+.ih .thrower .past>div>div:first-child>:first-child{
+    margin: 0 20px;
+}
+.ih .thrower .past>div>div:first-child >span:nth-child(3){
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: gray;
+    margin-left: 20px;
+}
+.ih .thrower img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.ih .thrower p {
+    margin: 0 0 0 10px;
+    padding: 5px 0;
+}
+/***** 끝 지난 평가 *****/

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="myPage.css">
+    <style>
+    </style>
+</head>
+
+
+
+<body>
+    <div class="body">
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------->
+
+        <div class="myPageNav">
+            <ul>
+                <li><a href="">회원정보보기</a></li>
+                <li><a href="">보안</a></li>
+                <li><a href="/debitcredit">평가내역보기</a></li>
+                <li><a href="">포인트내역</a></li>
+                <li><a href="">내 게시글 보기</a></li>
+            </ul>
+        </div>
+
+
+        <div class="ih">
+            <main>
+                <div class="main">
+                    <div class="lists">
+
+                        <div class="select">
+                            <ul>
+                                <li><label for="client">의뢰자로서 글 보기</label></li>
+                                <li><label for="shooter">해결사로서 글 보기</label></li>
+                            </ul>
+                        </div>
+
+                        <input type="radio" name="tabmenu" id="client" class="tobehidden" checked>
+                        <input type="radio" name="tabmenu" id="shooter" class="tobehidden">
+
+                        <!-- CLIENT ---------------------------------------------------------------->
+                        <div class="client listbox">
+                            <div class="recommands wTable">
+                                <div class="tableTitle">
+                                    <span>근거리 해결사 추천목록</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <tr>
+                                        <td><a href="">청소 시킬 분</a></td>
+                                        <td>20.3.20 PM 02:00</td>
+                                        <td>울산 남구</td>
+                                        <td>2시간</td>
+                                        <td>15000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">짐 들어드려요</a></td>
+                                        <td>20.3.23 AM 10:00</td>
+                                        <td>울산 중구</td>
+                                        <td>1시간</td>
+                                        <td>14000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">운전 연수 시켜드립니다</a></td>
+                                        <td>20.3.20 PM 03:30</td>
+                                        <td>울산 울주군</td>
+                                        <td>2시간</td>
+                                        <td>13000</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="ratings wTable">
+                                <div class="tableTitle">
+                                    <span>평가를 기다리고 있어요</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>평가</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 09:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 07:00</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 AM 08:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="accepteds wTable">
+                                <div class="tableTitle">
+                                    <span>내가 승인한 의뢰</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>수락취소</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 07:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>수락취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 05:30</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                            <td><button>수락취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 PM 06:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                            <td><button>수락취소</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="waitings wTable">
+                                <div class="tableTitle">
+                                    <span>지원을 받은 의뢰</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>해결사정보</th>
+                                            <th>수락여부</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 10:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>해결사보기</button></td>
+                                            <td><button>수락하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 AM 10:00</td>
+                                            <td>울산 울주군</td>
+                                            <td>30분</td>
+                                            <td>12000</td>
+                                            <td><button>해결사보기</button></td>
+                                            <td><button>수락하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 AM 11:00</td>
+                                            <td>울산 동구</td>
+                                            <td>2시간</td>
+                                            <td>6000</td>
+                                            <td><button>해결사보기</button></td>
+                                            <td><button>수락하기</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="none wTable">
+                                <div class="tableTitle">
+                                    <span>내가 의뢰한 글</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>글제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 07:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 AM 06:00</td>
+                                            <td>울산 울주군</td>
+                                            <td>2시간</td>
+                                            <td>12000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 AM 11:00</td>
+                                            <td>울산 동구</td>
+                                            <td>1시간</td>
+                                            <td>6000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- end CLIENT ---------------------------------------------------------------->
+                        <!-- SHOOTER ---------------------------------------------------------------->
+                        <div class="shooter listbox">
+                            <div class="recommands wTable">
+                                <div class="tableTitle">
+                                    <span>근거리 의뢰 추천목록</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <tr>
+                                        <td><a href="">청소 도와줄 분</a></td>
+                                        <td>20.3.20 AM 07:00</td>
+                                        <td>울산 남구</td>
+                                        <td>2시간</td>
+                                        <td>15000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">이사 도와줄 분</a></td>
+                                        <td>20.3.23 PM 03:00</td>
+                                        <td>울산 중구</td>
+                                        <td>1시간</td>
+                                        <td>14000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">택배 대신 받아줄 분</a></td>
+                                        <td>20.3.20 PM 03:00</td>
+                                        <td>울산 울주군</td>
+                                        <td>2시간</td>
+                                        <td>13000</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="ratings wTable">
+                                <div class="tableTitle">
+                                    <span>평가를 기다리고 있어요</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>평가</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 09:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 07:00</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 AM 08:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                            <td><button>평가하기</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="accepteds wTable">
+                                <div class="tableTitle">
+                                    <span>의뢰자가 승인한 의뢰</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>지원취소</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 07:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 05:30</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 PM 06:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="waitings wTable">
+                                <div class="tableTitle">
+                                    <span>내가 지원한 의뢰</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>의뢰제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                            <th>지원취소</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 07:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 05:30</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 PM 06:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                            <td><button>지원취소</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="none wTable">
+                                <div class="tableTitle">
+                                    <span>내가 해결사로 작성한 글</span>
+                                    <a href="">더보기</a>
+                                </div>
+                                <table cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>제목</th>
+                                            <th>의뢰날짜</th>
+                                            <th>장소</th>
+                                            <th>시간</th>
+                                            <th>보수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">이사 도와줄 분</a></td>
+                                            <td>20.1.31 AM 07:00</td>
+                                            <td>울산 남구</td>
+                                            <td>2시간</td>
+                                            <td>15000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">주차 가르쳐 줄 분</a></td>
+                                            <td>20.1.23 PM 05:30</td>
+                                            <td>울산 울주군</td>
+                                            <td>1시간30분</td>
+                                            <td>12000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">마트 장보는 것 짐 들어줄 분</a></td>
+                                            <td>20.1.21 PM 06:00</td>
+                                            <td>울산 동구</td>
+                                            <td>30분</td>
+                                            <td>6000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- end shooter --------------------------------------------------------------------->
+
+                    <div class="dangerZone">
+                        <span>위험한 구역</span>
+                        <ul>
+                            <li>
+                                <a href="">계정비활성화</a>
+                            </li>
+                            <li>
+                                <a href="">회원탈퇴</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------------------------------------------------------------------------------------->
+
+
+
+    </div>
+</body>
+
+</html>

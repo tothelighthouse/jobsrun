@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    font-size: 1rem;
+}
+.tobehidden {
+    display: none;
+}
+
+div>div>div {
+    padding: 5px 0px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/*** 마이페이지 nav 바 **/
+.myPageNav ul {
+	border:1px solid #ccc;
+    text-align: center;
+}
+.myPageNav li {
+	
+    display: inline-block;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.myPageNav a {
+    display: block;
+    padding: 5px;
+}
+.myPageNav a:hover {
+    background-color: grey;
+    color:white;
+    text-decoration: none;
+}

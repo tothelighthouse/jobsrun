@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.CSBoardDAO-mapper">
+<!-- 게시글작성 -->
+<insert id="write" parameterType="CSBoardVO">
+			INSERT INTO csboard ( 
+				csbnum,  
+				csbtitle, 
+				csbid, 
+				csbcontent, 
+				csbgroup
+		  ) 
+			VALUES ( 
+				csboard_csbnum_seq.nextval,  
+				#{csbtitle}, 
+				#{csbid}, 
+				#{csbcontent}, 
+				csboard_csbnum_seq.currval 
+		  ) 
+				<selectKey resultType="long" order="AFTER" keyProperty="csbnum"> 
+					select csboard_csbnum_seq.currval 
+					from dual 
+			</selectKey> <!--  사전에 어떤 키값을 먼저가져와서 사용하고싶을때 -->
+</insert>
+
+<!-- 게시글보기 -->
+<select id ="view" parameterType="long" resultType="CSBoardVO">
+	select
+		csbnum,
+		csbtitle,
+		csbid,
+		csbcdate,
+		csbudate,
+		csbcontent,
+		csbgroup,
+		csbstep,
+		csbindent
+	from
+		csboard
+	where csbnum = #{csbnum}
+</select>
+
+<!-- 게시글수정 -->
+<update id = "modify"	parameterType = "CSBoardVO">
+	update csboard
+		set 	csbtitle    = #{csbtitle},
+				csbcontent  = #{csbcontent},
+				csbudate    = systimestamp
+		where   csbnum      = #{csbnum}		
+</update>
+
+<!-- 게시글삭제 -->
+<delete id = "delete" parameterType="long">
+	delete from csboard
+	where csbnum = #{csbnum}
+	or csbgroup = #{csbgroup}
+</delete>
+
+<!-- 게시글목록 -->
+<!-- 1)전체 -->
+<select id = "list" resultType = "CSBoardVO">
+	select
+		csbnum,
+		csbid,
+		csbtitle,
+		csbcdate
+	from
+		csboard
+	order by csbnum desc
+</select>
+
+<!-- 3)검색어 있는 게시글검색(전체,제목,내용,작성자ID,별칭) -->
+<select id="list3" parameterType="map" resultType="CSBoardVO">
+  select 
+   csbnum,
+   csbtitle,
+   csbid,
+   csbcdate,
+   csbudate,
+   csbindent
+   from  (select row_number() over(order by csbgroup desc, csbstep asc) as num, 
+           csbnum,
+           csbtitle,
+           csbid,
+           csbcdate,
+           csbudate,
+           csbindent
+          from csboard 
+                 
+     <if test="searchType != null and list != null">
+     where 		
+	 		<foreach item="item" collection="list"
+	 			open="(" separator="and" close=")">   		
+
+      <choose>
+      	<!-- 제목+내용 -->
+      	<when test="searchType == 'TC'.toString()">
+      		csbtitle 	 like  '%'||#{item}||'%' 
+      		 or 
+      		csbcontent like  '%'||#{item}||'%' 
+      	</when>
+      	<!-- 제목 -->
+      	<when test="searchType == 'T'.toString()">
+      		csbtitle 	 like '%'||#{item}||'%'             	
+      	</when>
+      	<!-- 내용 -->
+      	<when test="searchType == 'C'.toString()">
+      		csbcontent like '%'||#{item}||'%'             	
+      	</when>               	              	
+      	<!-- 아이디 -->
+      	<when test="searchType == 'I'.toString()">
+      		csbid like '%'||#{item}||'%'                	
+      	</when>   
+      	<!-- 전체 -->              	
+       <otherwise>
+      	  csbtitle 	  like '%'||#{item}||'%' 
+          or 
+          csbcontent 	like '%'||#{item}||'%'                                       
+          or 
+          csbid 		  like '%'||#{item}||'%' 
+       </otherwise>
+      </choose>
+      </foreach>  
+     </if>  
+              )                            
+      where num between #{startRec} and #{endRec} 	 
+	</select>
+	
+<!-- 게시글답글작성 -->
+<insert id="reply" parameterType="CSBoardVO">
+	INSERT INTO csboard ( 
+		csbnum, 
+		csbtitle, 
+		csbid, 
+		csbcontent, 
+		csbgroup,
+		csbstep,
+		csbindent
+	 ) 
+	VALUES( 
+		csboard_csbnum_seq.nextval, 
+		#{csbtitle}, 
+		#{csbid}, 
+		#{csbcontent}, 
+		#{csbgroup},
+		#{csbstep} +1,
+		#{csbindent} + 1
+	) 
+	<selectKey resultType="long" order="AFTER" keyProperty="csbnum"> 
+		select csboard_csbnum_seq.currval from dual
+	</selectKey>
+</insert>
+<!-- 이전 답글 step 업데이트 -->
+<!-- 이전 답글 중 원글의 bstep 보다 큰 값이 있는 경우 bstep +1 증가 -->
+<update id = "updateStep" parameterType = "map">
+	update csboard
+	set    csbstep = csbstep + 1
+	where  csbgroup = #{csbgroup} and csbstep > #{csbstep}
+</update>
+
+	<!-- 총 레코드수 -->
+<select id="totalRecordCount" parameterType="map" resultType="int">
+	select count(csbnum) as totalcnt
+  	from csboard
+  
+  <if test="searchType != null and list != null"> 
+  	where
+	<foreach item="item" collection="list"
+	 open="(" separator="and" close=")">   		
+      <choose>
+      	<!-- 제목+내용 -->
+      	<when test="searchType == 'TC'.toString()">
+      		csbtitle 	 like  '%'||#{item}||'%' 
+      		 or 
+      		csbcontent like  '%'||#{item}||'%' 
+      	</when>
+      	<!-- 제목 -->
+      	<when test="searchType == 'T'.toString()">
+      		csbtitle 	 like '%'||#{item}||'%'             	
+      	</when>
+      	<!-- 내용 -->
+      	<when test="searchType == 'C'.toString()">
+      		csbcontent like '%'||#{item}||'%'             	
+      	</when>               	
+      	              	
+      	<!-- 아이디 -->
+      	<when test="searchType == 'I'.toString()">
+      		csbid like '%'||#{item}||'%'                	
+      	</when>   
+      	<!-- 전체 -->              	
+       <otherwise>
+      	  csbtitle 	 	like '%'||#{item}||'%' 
+          or 
+          csbcontent 	like '%'||#{item}||'%'                    
+          or 
+          csbid 	    like '%'||#{item}||'%' 
+       </otherwise>
+      </choose>
+      </foreach>  
+     </if>                        
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

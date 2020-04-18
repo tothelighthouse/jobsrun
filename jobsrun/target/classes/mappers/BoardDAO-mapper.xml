@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.BoardDAO-mapper">
+	<!-- 게시판 카테고리 읽어오기 -->
+	<select id="getCategory" resultType="BoardCategoryVO">
+		select bcid, bcname from boardcategory
+	</select>
+	<!-- //게시글 작성 -->
+	<insert id="write" parameterType="BoardVO">
+		INSERT INTO board (
+		bnum,
+		bbcid,
+		blocation,
+		bid,
+		bnickname,
+		bcontent,
+		sdatetime,
+		job,
+		duration,
+		payment,
+		btitle,
+		latitude,
+		longitude
+		) VALUES (
+		BOARD_BNUM_SEQ.nextval,
+		#{boardCategoryVO.bcid},
+		#{blocation},
+		#{bid},
+		#{bnickname},
+		#{bcontent},
+		#{sdatetime},
+		<!-- to_timestamp(#{startdate}, 'YYYY-MM-DD HH24:MI:SS'), -->
+		#{job},
+		#{duration},
+		#{payment},
+		#{btitle},
+		#{latitude},
+		#{longitude}
+		)
+		<selectKey keyProperty="bnum" resultType="long"
+			order="AFTER">
+			select board_bnum_seq.currval from dual
+		</selectKey>
+
+	</insert>
+	<!-- 첨부파일 저장 -->
+	<insert id="fileWrite"
+			parameterType="BoardFileVO">
+	insert into board_upload_file(
+	    fid,
+	    bnum,
+	    fname,
+	    fsize,
+	    ftype,
+	    fdata
+	)values(
+	    board_upload_file_fid_seq.nextval,
+	    #{bnum},
+	    #{fname},
+	    #{fsize},
+	    #{ftype},
+	    #{fdata}
+	)
+	</insert>
+	<!-- 게시글 보기 -->
+	<select id="view"
+		resultType="BoardVO">
+		SELECT
+		  bnum,
+		  blocation,
+		  t2.bcid   as "boardCategoryVO.bcid",
+		  t2.bcname as "boardCategoryVO.bcname",
+		  btitle,
+		  bid,
+		  bnickname,
+		  bcdate,
+		  budate,
+		  bhit,
+		  bcontent,
+		  sdatetime,
+		  job,	
+		  duration, 
+		  payment,
+		  bstatus,
+		  bapplication,
+		  latitude,
+		  longitude
+		FROM
+		  board t1 ,boardcategory t2
+		where t1.bbcid = t2.bcid	
+			and t1.bnum = #{bnum}
+	
+	</select>
+	<!-- 첨부파일 가져오기 -->
+	<select id="fileViews"
+			parameterType="long"
+			resultType="BoardFileVO">
+					
+		SELECT fid, bnum, fname, fsize, ftype, fdata, cdate, udate
+		  FROM board_upload_file
+		 where bnum = #{bnum}	
+		 order by fid desc  				
+	</select>
+	<!-- 조회수 +1증가 -->
+	<update id="updateHit" 
+			parameterType="long">
+	
+		update board
+			 set bhit = bhit + 1
+		 where bnum = #{bnum}
+	</update>
+	
+	<!-- 특정 사용자의 모든 작성글의 지역 검색 -->
+	<select id="userwritelist" resultType="BoardVO">
+		select
+			substr(blocation,0,5) as blocation
+		from board
+		where bid = #{bid} 
+		and bbcid = #{bbcid}
+		and bstatus = 0
+	</select>
+	
+	<!-- 로그인 사용자의 위치 기반 게시글 목록 리턴 -->
+	<select id="boardlistAll"
+			parameterType="map"
+			resultType="BoardVO">
+		select bnum,
+			   bbcid,
+			   substr(blocation,0,5) as blocation,
+			   bid,
+			   bnickname, 
+			   bcontent,
+			   bcdate,
+			   sdatetime,
+			   job,
+			   duration,
+			   payment,
+			   bstatus,
+		 	   bapplication,
+			   btitle,
+			   latitude,
+			   longitude
+		  from (select row_number() over(order by bnum) as num,
+				  	   bnum,
+					   bbcid,
+					   substr(blocation,0,5) as blocation,
+					   bid,
+					   bnickname, 
+					   bcontent,
+					   bcdate,
+					   sdatetime,
+					   job,
+					   duration,
+					   payment,
+					   bstatus,
+					   bapplication,
+					   btitle,
+					   latitude,
+					   longitude
+				  from board
+				  where bbcid = #{bcategory}
+				  and bstatus = 0
+				  <if test="list != null">
+				    and substr(blocation,0,5) in
+			        <foreach item="item" collection="list" open="(" close=")" separator=",">
+				    #{item}	
+			        </foreach>
+		          </if>	
+				)
+				
+		    where num between #{startRec } and #{endRec } 
+	</select>
+	
+	<!-- 로그인 사용자의 위치 기반 게시글 목록 총 개수 -->
+	<select id="boardlistAllCount"
+			parameterType="map"
+			resultType="int">
+		select count(bnum) as totalcnt
+		  from board
+		  where bbcid = #{bcategory}
+		  and   bstatus = 0
+		  <if test="list != null">
+		  	and substr(blocation,0,5) in
+			  <foreach item="item" collection="list" open="(" close=")" separator=",">
+			   #{item}		
+			  </foreach>
+		  </if>
+	</select>
+	<!-- 전체 게시글 조회 -->
+	<select id="list" resultType="BoardVO">
+		select
+		bnum,
+		bbcid,
+		substr(blocation,0,5) as blocation,
+		bid,
+		bnickname,
+		bcontent,
+		bcdate,
+		budate,
+		sdatetime,
+		job,
+		duration,
+		payment,
+		bhit,
+		btitle,
+		latitude,
+		longitude
+		from board
+		where bstatus = 0
+		order by bnum desc, bcdate desc
+	</select>
+	
+	<!-- 메인화면 의뢰자, 해결사 게시물 -->
+	<select id="mainlist" parameterType="String"
+					  resultType="BoardVO">
+		select
+		bnum,
+		bbcid,
+		substr(blocation,0,5) as blocation,
+		bid,
+		bnickname,
+		bcontent,
+		bcdate,
+		budate,
+		sdatetime,
+		job,
+		duration,
+		payment,
+		bhit,
+		btitle,
+		latitude,
+		longitude
+		from board
+		where <![CDATA[ROWNUM <= 16]]>
+		and bbcid = #{category}
+		and bstatus = 0
+		order by bnum desc, bcdate desc
+	</select>
+	
+	<!-- 관리자 페이지 의뢰자, 해결사 게시물 -->
+	<select id="adminlist" parameterType="String"
+					  resultType="BoardVO">
+		select
+		bnum,
+		bbcid,
+		substr(blocation,0,5) as blocation,
+		bid,
+		bnickname,
+		bcontent,
+		bcdate,
+		budate,
+		sdatetime,
+		job,
+		duration,
+		payment,
+		bhit,
+		btitle,
+		latitude,
+		longitude
+		from board
+		where bbcid = #{category}
+		order by bnum desc, bcdate desc
+	</select>
+	
+	<!-- 3)검색어 있는 게시글검색(전체,제목,내용,작성자ID,별칭) -->
+	<select id="list3"
+			parameterType="map"
+			resultType="BoardVO">
+		select bnum,
+			   bbcid,
+			   substr(blocation,0,5) as blocation,
+			   bid,
+			   bnickname, 
+			   bcontent,
+			   bcdate,
+			   sdatetime,
+			   job,
+			   duration,
+			   payment,
+			   btitle,
+			   latitude,
+			   longitude
+		  from (select row_number() over(order by bnum desc) as num,
+				  	   bnum,
+					   bbcid,
+					   substr(blocation,0,5) as blocation,
+					   bid,
+					   bnickname, 
+					   bcontent,
+					   bcdate,
+					   sdatetime,
+					   job,
+					   duration,
+					   payment,
+					   btitle,
+					   latitude,
+					   longitude
+				  from board
+				  where bbcid = #{bcategory}
+				  and  bstatus = 0
+			<if test="searchType != null and list != null">
+		     and  
+		     <foreach item="item" collection="list" open="(" close=")" separator="or">
+				<choose>
+				 <!-- 제목 + 내용 -->
+				 <when test="searchType == 'TC'.toString()">
+				 	btitle like '%'||#{item}||'%' or bcontent like '%'||#{item}||'%'
+				 </when>	
+				 <!-- 제목 -->
+				 <when test="searchType == 'T'.toString()">
+				 	btitle like '%'||#{item}||'%'
+				 </when>	
+				 <!-- 내용 -->
+				 <when test="searchType == 'C'.toString()">
+				 	bcontent like '%'||#{item}||'%'
+				 </when>	
+				 <!-- 작성자(별칭)-->
+				 <when test="searchType == 'N'.toString()">
+				 	bnickname like '%'||#{item }||'%'
+				 </when>	
+				 <!-- 아이디 -->
+				 <when test="searchtype == 'I'.toString()">
+				 	bid like '%'||#{item}||'%'
+				 </when>
+				 	
+				 <!-- 전체-->
+				 <otherwise>
+				 	btitle like '%'||#{item}||'%' or
+				 	bcontent like '%'||#{item}||'%' or
+				 	bnickname like '%'||#{item}||'%' or
+				 	bid like '%'||#{item}||'%'
+				 </otherwise>
+     			</choose>
+			 </foreach>
+			</if>	  
+			<!-- 일 위치 -->
+			<if test="location !=null">
+				and blocation = #{location}			
+			</if>
+		    <!-- 일 종류 -->
+			<if test="job != null">
+				and job like '%'||#{job}||'%'
+			</if>
+		    <!-- 일 기간 -->
+			<if test="duration!= null">
+				and duration  = #{duration} 
+			</if>
+		    <!-- 일 보수 -->
+			<if test="payment != null">
+				and payment = #{payment}
+			</if>
+		  		)
+		  where num between #{startRec} and #{endRec}
+		  
+	</select>
+	<!-- 메인화면 추천리스트 -->
+	<select id="recommendlist" resultType="BoardVO" parameterType="String">
+		select
+		bnum,
+		bbcid,
+		substr(blocation,0,5) as blocation,
+		bid,
+		bnickname,
+		bcontent,
+		bcdate,
+		budate,
+		sdatetime,
+		job,
+		duration,
+		payment,
+		bhit,
+		btitle,
+		latitude,
+		longitude
+		from board
+		where blocation like '%'||#{location}||'%'
+		and   bbcid = #{category}
+		and  <![CDATA[ROWNUM <= 16]]>
+		and   bstatus = 0
+		order by bnum desc, bcdate desc
+	</select>
+	
+	<!-- 첨부파일 조회 -->
+	<select id="fileView"
+			parameterType="long"
+			resultType="BoardFileVO">
+					
+		SELECT fid, bnum, fname, fsize, ftype, fdata, cdate, udate
+		  FROM board_upload_file
+		 where fid = #{fid}					
+	</select>
+	
+	<!-- 총 레코드수 -->
+	<select id="totalRecordCount"
+			parameterType="map"
+			resultType="int">
+		select count(bnum) as totalcnt
+		  from board
+		  where bbcid = #{bcategory} 
+		  <if test="searchType !=null and list !=null">
+		   and
+		   <foreach item="item" collection="list" open="(" separator="or" close=")">
+			   <choose>
+			   <!-- 제목 + 내용 -->
+			   <when test="searchType == 'TC'.toString()">
+			   	btitle like '%'||#{item}||'%' and bcontent like '%'||#{item}||'%'
+			   </when>
+			   <!-- 제목 -->
+			   <when test="searchType == 'T'.toString()">
+			   	btitle like '%'||#{item]||'%'
+			   </when>
+			   <!-- 내용 -->
+			   <when test="searchType == 'C'.toString()">
+			   	bcontent like '%'||#{itme}||'%'
+			   </when>
+			   <!-- 작성자(별칭) -->
+			   <when test="searchType == 'N'.toString()">
+			   	bnickname like '%'||#{item}||'%'
+			   </when>
+			   <!-- 아이디 -->
+			   <when test="searchType = 'I'.toString()">
+			   	bid like '%'||#{item}||'%'
+			   </when>
+			   <!-- 전체-->
+			   <otherwise>
+			      btitle    like '%'||#{item}||'%'
+			   or bcontent  like '%'||#{item}||'%'
+			   or bnickname like '%'||#{item}||'%'
+			   or bid       like '%'||#{item}||'%'
+			   </otherwise>
+			   </choose>
+		   </foreach>
+		  </if>
+		  <!-- 일 위치 -->
+		  <if test="location != null">
+		   	and blocation = #{location}
+		  </if>
+		  <!-- 일 종류 -->
+		  <if test="job !=null">
+		  	and job = #{job}
+		  </if>
+		  <!-- 일 기간 -->
+		  <if test="duration != null">
+		  	and duration = #{duration}
+		  </if>
+		  <!-- 일  보수-->
+		  <if test="payment != null">
+		  	and payment = #{payment}
+		  </if>
+	</select>
+	
+	<!-- 매칭되지 않은 글 조회 -->
+	<select id="listNotMatched"
+			parameterType="map"
+			resultType="BoardVO">
+	select * from board where bbcid = #{bbcid} and bstatus = 0 and bid = #{bid} order by bcdate desc
+	
+	</select>
+	<!-- 지원된 글 조회 -->
+	<select id="listApplied"
+			parameterType="map"
+			resultType="BoardVO">
+	select * from board where bbcid = #{bbcid} and bstatus = 1 and bid = #{bid} order by bcdate desc
+	</select>
+	<!-- 승인된 글 조회 -->
+	<select id="listPermitted"
+			parameterType="map"
+			resultType="BoardVO">
+	select * from board where bbcid = #{bbcid} and bstatus = 2 and bid = #{bid} order by bcdate desc
+	</select>
+	
+	<!-- 나의 신청 조회 -->
+	<select id="queryList"
+			parameterType="BoardVO"
+			resultType="BoardVO">
+		select * from board where bbcid = #{bbcid} and bstatus = #{bstatus} and bapplication = #{bapplication}
+	</select>
+	
+	<!-- 게시글에 대한 지원과 지원철회, 지원 거절 -->
+	<update id="application"
+			parameterType="BoardVO">
+	    update board
+	       set bstatus = decode(bstatus, 1, 0 , 1),
+	           bapplication = decode(bapplication, null, #{bapplication}, null)
+	     where bnum = #{bnum}
+	</update>
+	
+	<!-- 게시글에 대한 승낙 -->
+	<update id="permission"
+			parameterType="long">
+		update board set bstatus = 2 where bnum = #{bnum}
+	</update>
+	
+	<!-- 게시글 완료 -->
+	<update id="boardCompletion"
+			parameterType="long">
+		update board set bstatus = 3 where bnum = #{bnum}
+	</update>
+	
+	<!-- 게시글수정 -->
+	<update id="modify"
+			parameterType="BoardVO">
+		update board
+		set 
+		    btitle = #{btitle },
+		    bcontent = #{bcontent },
+		    job = #{job },
+		    duration =  #{duration },
+		    payment = #{payment },
+		    budate = systimestamp,
+		    sdatetime = #{sdatetime }
+		where 
+		    bnum = #{bnum }
+    	
+    </update>
+		
+	<!-- 게시글삭제 -->
+	<delete id="delete" parameterType="long">
+		delete from board where bnum = #{bnum}
+	</delete>
+	<!-- 첨부파일 1건 삭제 -->
+	<delete id="fileDelete" parameterType="long">
+		delete from board_upload_file where fid = #{fid}
+	</delete>
+	<!-- 게시글 첨부파일 전체 삭제 -->
+	<delete id="filesDelete" parameterType="long">
+		delete from board_upload_file where bnum = #{bnum}
+	</delete>
+</mapper>

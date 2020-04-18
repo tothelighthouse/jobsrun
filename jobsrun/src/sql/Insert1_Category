@@ -1,0 +1,8 @@
+----------------------------------
+-- BoardCategory 데이터 입력
+----------------------------------
+INSERT INTO BOARDCATEGORY (BCID,BCNAME) VALUES (1,'의뢰자 게시판');
+INSERT INTO BOARDCATEGORY (BCID,BCNAME) VALUES (2,'해결사 게시판');
+
+
+

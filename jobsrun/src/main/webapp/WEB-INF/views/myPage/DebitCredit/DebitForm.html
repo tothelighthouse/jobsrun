@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+
+    <link rel="stylesheet" href="DebitForm.css">
+
+    <script src="DebitForm.js"></script>
+
+
+
+
+</head>
+<body>
+    <div class="body">
+
+
+<div class="ih">
+    <h1>포인트 받기</h1>
+    <form action="" id="debitForm">
+        <ul>
+            <li class="idx"><span>받을 포인트(10000원 단위)</span><span>(현재포인트: <span id="myPoint">55555</span>)</span></li>
+            <li><input type="number" min="10000" step="10000" id="amount" value="10000"></li>
+            <li><span class="errMsg" id="amountErr"></span></li>
+    
+            <li class="idx"><span>은행</span></li>
+            <li>
+                <select name="" id="bank">
+                    <option value="">==== 은행을 선택하세요 ====</option>
+                    <option value="hana">하나은행</option>
+                    <option value="kakao">카카오</option>
+                    <option value="kb">국민은행</option>
+                    <option value="ibk">기업은행</option>
+                </select>
+            </li>
+            <li><span class="errMsg" id="bankErr"></span></li>
+
+            <li class="idx"><span>계좌번호("-" 제외)</span></li>
+            <li><input type="number" max="9999999999999999" id="acctNum"></li>
+            <li><span class="errMsg" id="acctNumErr"></span></li>
+
+            <li class="idx"><span>안내 사항</span></li>
+            <li><textarea name="" id="" cols="30" rows="10" readonly="true">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, reiciendis minima? Iure quisquam earum possimus excepturi alias unde sequi cumque beatae, expedita facere ratione odit. Voluptas at reiciendis nostrum quam!
+Explicabo officia sequi voluptate cupiditate, maiores mollitia alias numquam veritatis voluptatem omnis magni facere a, quisquam error? Aspernatur inventore consequatur, labore ab, maxime culpa, explicabo rem molestiae quibusdam dolore voluptate?
+Obcaecati itaque exercitationem nobis praesentium similique amet dolores optio, adipisci eius eum corrupti pariatur atque reiciendis ea minus numquam ipsum necessitatibus odio? Magni, at omnis harum in itaque dolorum illo.
+Amet totam fugit sunt veritatis quia. Doloribus hic voluptatum nemo. Temporibus officiis in odit officia ipsam alias consectetur optio inventore sequi rerum accusamus quia assumenda commodi, magnam vel ullam quo?
+Ex eligendi, optio nobis, minima nihil quos non voluptatum possimus officia aperiam doloremque. Eos nemo laborum ex aperiam sequi? Qui, quam dolore earum odit voluptatum neque ipsa corrupti saepe esse?
+Optio incidunt ab consectetur porro facere. Sunt, harum nostrum. Temporibus sed eum itaque excepturi dolore, repellat reprehenderit. Vero nobis, iste rerum illo accusantium deleniti commodi ratione magnam quisquam dignissimos explicabo?
+Eum vel voluptate fuga eligendi alias veniam mollitia nam quibusdam incidunt temporibus dolores voluptas nihil maxime, repellendus dolor animi? Necessitatibus, quibusdam possimus. Nisi maxime veritatis assumenda asperiores nulla officia ullam.
+Rem, earum cupiditate in atque nulla inventore voluptatum totam ducimus cum? Dolores vero consequuntur eveniet aut, praesentium nostrum sunt non corrupti quaerat qui atque. Quaerat perferendis maxime ipsam maiores temporibus.
+Optio facilis in porro iure nesciunt nam, accusantium mollitia id, repellat, hic perferendis vero nobis possimus maiores numquam sapiente nulla. Officiis eos odio nostrum harum amet praesentium reprehenderit similique sed.
+Saepe obcaecati quasi, qui quam porro quidem quo inventore iure aut molestiae, aliquam nobis odit. Vel expedita recusandae possimus beatae suscipit necessitatibus nemo nesciunt doloremque deserunt porro animi, voluptate inventore!
+
+            </textarea></li>
+            <li class="idx right">
+                <input type="checkbox" value="agree" id="agree"><label for="agree">위 내용에 동의합니다</label>
+            </li>
+        </ul>
+        <div class="btns">
+            <button type="submit" id="submit"> 포인트받기 </button>
+            <button type="reset" id="cancel"> 취소 </button>
+        </div>
+    </form>
+
+
+
+
+
+</div>
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+    </div>
+</body>
+</html>

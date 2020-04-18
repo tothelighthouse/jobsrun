@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+
+/************************************/
+
+/***** 전체 레이 아웃 *****/
+.ih * {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+.ih {
+    display: flex;
+    min-height: 100vh;
+}
+.ih .receiver {
+    width: 300px;
+    margin-right: 10px;
+}
+.ih .thrower {
+    flex:1;
+}
+/***** 끝 전체 레이 아웃 *****/
+
+/***** 평가 받는 사람 *****/
+.ih .receiver {
+    background-color: lightgray;
+    text-align: center;
+}
+.ih .receiver>div>* {
+    padding: 5px;
+}
+.ih .receiver .info p {
+    padding: 0 20px;
+}
+.ih .receiver .info span {
+    font-weight: 800;;
+    font-size: 1.5rem;
+}
+.ih .receiver img {
+    width: 200px;
+    height: 200px;
+    margin: 30px 10px 10px 10px;
+    border-radius: 50px;
+}
+.ih .receiver table {
+    width: 100%;
+}
+/***** 끝 평가 받는 사람 *****/
+
+
+/***** 평가 하는 사람 *****/
+.ih .thrower .inputs {
+    padding: 10px;
+}
+.ih .thrower .star {
+    margin: 3px;
+}
+.ih .thrower .inputs>span {
+    font-weight: 900px;
+    font-size: 1.7rem;
+}
+.ih .thrower form table {
+    width: 100%;
+}
+.ih .thrower form table th {
+    min-width: 70px;
+    width: 100px;
+}
+.ih .thrower form table tr * {
+    padding: 10px 3px;
+    min-height: 30px;
+}
+
+.ih .thrower form table td textarea {
+    width: 95%;
+    min-width: 300px;
+}
+.ih button {
+    padding: 10px 30px !important;
+    font-weight: bolder;
+}
+/***** 끝 평가 하는 사람 *****/
+
+
+/**** 유효성 체크 ****/
+#pointErr {
+    color: red;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    text-indent: 20px;
+}
+#telsp{
+	position:relative;
+	top:10px;
+	font-size:20px;
+}
+#tdrate{
+	font-size:20px;
+}
+#rateb{
+	font-size:25px;
+	color:red;
+}
+#submitBtn{
+	background-color:#BF00FF;
+	color:white;
+	
+}
+/**** 끝 유효성 체크 ****/

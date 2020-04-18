@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+
+
+    <link rel="stylesheet" href="RaingForm.css">
+    <script src="RatingForm.js"></script>
+
+
+</head>
+<body>
+    <div class="body">
+
+
+
+
+
+<div class="ih">
+    <div class="receiver">
+        <div class="info">
+            <img src="psa.jpg" alt="평가 받는 사람 사진">
+            <span>NAMENAME</span>
+            <div class="intro">
+                <p>
+                    here, GOOD
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam corporis rerum inventore blanditiis aliquam sapiente perspiciatis accusantium est laboriosam. Optio, aliquam quos. Fugit, distinctio et nihil minus nesciunt ipsa temporibus.
+                    Inventore recusandae facilis vitae quae voluptatem odit adipisci aut numquam sit libero, illo accusantium, fuga harum cumque a id necessitatibus. Sunt eius at repellat enim, voluptatem ad non quibusdam veritatis!
+                </p>
+            </div>
+        </div>
+        <div class="rates">
+            <table>
+                <tr>
+                    <th>평점</th>
+                    <td>9.95</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!----------- end .receiver ----------->
+    <div class="thrower">
+        <div class="inputs">
+            <span>평가를 해주세요</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <form action="#" id="ratingForm">
+                <table>
+                    <tr>
+                        <th><label for="points">평점</label></th>
+                        <td>
+                            <select name="points" id="points">
+                                <option value="">===== 평점을 입력해주세요 =====</option>
+                                <option value="1">
+                                    <span>★</span>
+                                </option>
+                                <option value="2">
+                                    <span>★★</span>
+                                </option>
+                                <option value="3">
+                                    <span>★★★</span>
+                                </option>
+                                <option value="4">
+                                    <span>★★★★</span>
+                                </option>
+                                <option value="5">
+                                    <span>★★★★★</span>
+                                </option>
+                            </select>
+                            <span id="pointErr"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="details">세부내용</label></th>
+                        <td><textarea name="details" id="details" cols="30" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><button type="submit" id="submit">등록하기</button></th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!----------- end .thrower ----------->
+
+
+
+
+
+</div>
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

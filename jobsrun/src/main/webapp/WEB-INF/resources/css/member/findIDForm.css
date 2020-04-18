@@ -1,0 +1,143 @@
+@charset "UTF-8";
+* {
+	font-family: "Sunflower", sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1024px;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	/* outline: 1px solid; */
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: grid;
+  	grid-template-rows: minmax(100px, auto) auto 200px;
+  	gap: 20px 0;
+}
+
+.container > div {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+#title{
+	margin:0 auto;
+	width:150px;
+	position:relative;
+	left:30px;
+	font-weight:bold;
+	font-size:30px;
+	margin-top:100px;
+}
+#description{
+	margin:0 auto;
+	margin-top:20px;
+}
+.findIDForm-dh{
+	margin:0 auto;
+	margin-top:30px;
+	height:400px;
+}
+#telfont{
+	width:65px;
+	float:left;
+}
+#telinput{
+	float:left;
+}
+#telinput-input{
+	width:210px;
+}
+#telMsgwrap,#birthMsgwrap{
+	clear:both;
+}
+#telMsg,#birthMsg{
+	margin-left:70px;
+	color:red;
+	position:relative;
+	top:5px;
+}
+#birthwrap{
+	clear:both;
+	position:relative;
+	top:10px;
+}
+#birthfont{
+	width:65px;
+	float:left;
+}
+#birthinput{
+	float:left;
+}
+#birthinput-input{
+	width:210px;
+}
+#birthBtnwrap{
+	
+	float:left;
+}
+#birthBtn{
+	background-color:#A4A4A4;
+	color:white;
+}
+#idfind{
+	clear:both;
+	position:relative;
+	top:15px;
+	margin-left:65px;
+	width:215px;
+	height:130px;
+	border:1px solid #ccc;
+	display:none; 
+}
+#inputfindwrap{
+	margin-left:60px;
+	position:relative;
+	top:10px;
+	float:left;
+}
+#id{
+	color:red;
+	font-size:15px;
+	position:relative;
+	right:30px;
+	top:5px;
+	border:none;
+	background-color:transparent;
+}
+#cdate{
+	position:relative;
+	left:40px;
+	bottom:5px;
+}
+#joindatewrap{
+	margin-left:30px;
+	position:relative;
+	top:30px;
+	clear:both;
+}
+#joindate{
+	border:none;
+	font-size:15px;
+}
+#findIDBtnwrap{
+	position:relative;
+	top:20px;
+	width:190px;
+	margin-left:65px;
+}
+#findIDBtn{
+	background-color:black;
+	opacity:0.8px;
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+	width:215px;
+}

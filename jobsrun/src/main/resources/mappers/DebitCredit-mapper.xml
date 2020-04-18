@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.DebitCredit-mapper">
+
+<!-- READ ALL TRANSACTION *************************************************************** -->
+<select id="history" parameterType="String" resultType="DebitCreditVO">
+	SELECT 	id	,tdate	,amount	,via ,detail 
+	FROM 	debitcredit 
+	WHERE 	id = #{id}
+	ORDER BY tdate DESC
+</select>
+<!-- end READ ALL TRANSACTION *************************************************************** -->
+
+
+
+<!-- Increase Credit *************************************************************** -->
+<insert id="incsCrd" parameterType="DebitCreditVO">
+	INSERT INTO DebitCredit (
+		"NUM" 
+		,"ID" 	,"AMOUNT"
+		,"VIA"	,"DETAIL" 
+		,"TDATE" 
+	) VALUES (
+		DebitCredit_NUM_SEQ.NEXTVAL 
+		,#{id}	,#{amount} 
+		,#{via}	,#{detail}	
+		,SYSTIMESTAMP
+	)
+</insert>
+<!-- end Increase Credit *************************************************************** -->
+
+
+
+<!-- Increase Debit *************************************************************** -->
+<insert id="decsCrd" parameterType="DebitCreditVO">
+	INSERT INTO DebitCredit (
+		"NUM" 
+		,"ID" 	,"AMOUNT"
+		,"VIA"	,"DETAIL" 
+		,"TDATE" 
+	) VALUES (
+		DebitCredit_NUM_SEQ.NEXTVAL 
+		,#{id}	,#{amount} 
+		,#{via}	,#{detail}	
+		,SYSTIMESTAMP)
+</insert>
+<!-- start calculation Debit *************************************************************** -->
+<select id="calculation"
+		parameterType="string"
+		resultType="int">
+	select sum(AMOUNT) from debitcredit where id = #{id}		
+</select>
+<!-- end calculation Debit *************************************************************** -->
+
+<!-- start 보수 차감 *************************************************************** -->
+<insert id="contractPay"
+		parameterType="ContractVO">
+		insert into debitcredit (
+        num,
+        id,
+        amount,
+        contnum
+    )values (
+        contract_contnum_seq.nextval,
+        #{clientID},
+        #{camount}*-1,
+        #{contnum}
+)
+</insert>
+<!-- end 보수 차감 *************************************************************** -->
+
+<!-- start 보수 지급 *************************************************************** -->
+<insert id="scontractPay"
+		parameterType="ContractVO">
+insert into debitcredit (
+        num,
+        id,
+        amount,
+        contnum
+    )values (
+        contract_contnum_seq.nextval,
+        #{shooterID},
+        #{camount},
+        #{contnum}
+)
+</insert>
+<!-- end 보수 지급 *************************************************************** -->
+
+<!-- start 이메일 인증 포인트 지급 *************************************************************** -->
+<insert id="emailPoint"
+		parameterType="string">
+insert into debitcredit (
+        num,
+        id,
+        amount,
+        VIA
+    )values (
+        contract_contnum_seq.nextval,
+        #{id},
+        5000,
+        '이메일 인증'
+)
+</insert>
+<!-- end 이메일 인증 포인트 지급 *************************************************************** -->
+
+
+
+</mapper>
