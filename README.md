@@ -5,7 +5,7 @@
 - 실행환경  
     Oracle Database 11g Express Edition  
     APACHE TOMCAT 9
-- DB 익스포트 후 샘플 데이터 생성 쿼리  
+- DB 임포트 후 샘플 데이터 생성 쿼리  
     delete from member;  
     exec member_sample_data_proc(50);  
     exec board_sample_data_proc(1000);  
